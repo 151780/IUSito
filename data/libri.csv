@@ -1,32 +1,32 @@
 titolo,tipo,ciclo,ordine1,ordine2,isbn,img,link,anno,genere
-Abissi d'acciaio,Romanzo,Robot,1954,6,978-8804403043,LibroAbissiDAcciaio.jpg,SinossiAbissiDAcciaio.txt,1954,Fantascienza
-Il sole nudo,Romanzo,Robot,1957,7,978-8804398172,LibroIlSoleNudo.jpg,SinossiIlSoleNudo.txt,1957,Fantascienza
-I robot dell'alba,Romanzo,Robot,1983,8,978-8804403036,LibroIRobotDellAlba.jpg,SinossiIRobotDellAlba.txt,1983,Fantascienza
-I robot e l'impero,Romanzo,Robot,1985,9,978-88044115051,LibroIRobotELImpero.jpg,SinossiIRobotELImpero.txt,1985,Fantascienza
-Paria dei cieli,Romanzo,Impero,1950,12,978-8804403005,LibroPariaDeiCieli.jpg,SinossiPariaDeiCieli.txt,1950,Fantascienza
-Il tiranno dei mondi,Romanzo,Impero,1951,10,978-8804395966,LibroIlTirannoDeiMondi.jpg,SinossiIlTirannoDeiMondi.txt,1951,Fantascienza
-Le correnti dello spazio,Romanzo,Impero,1952,11,978-8804406853,LibroLeCorrentiDelloSpazio.jpg,SinossiLeCorrentiDelloSpazio.txt,1952,Fantascienza
-Fondazione - Cronache della galassia,Romanzo,Fondazione,1951,15,978-8804772941,LibroFondazione.jpg,SinossiFondazione.txt,1951,Fantascienza
-L'orlo della fondazione,Romanzo,Fondazione,1982,18,978-8804398165,LibroLOrloDellaFondazione.jpg,SinossiLOrloDellaFondazione.txt,1982,Fantascienza
-La seconda fondazione - L'altra faccia della spirale,Romanzo,Fondazione,1953,17,978-8804772972,LibroLaSecondaFondazione.jpg,SinossiLaSecondaFondazione.txt,1953,Fantascienza
-Fondazione e Impero - Il crollo della galassia centrale,Romanzo,Fondazione,1945,16,978-8804772965,LibroFondazioneEImpero.jpg,SinossiFondazioneEImpero.txt,1945,Fantascienza
-Fondazione e Terra,Romanzo,Fondazione,1986,19,978-8804403029,LibroFondazioneETerra.jpg,SinossiFondazioneETerra.txt,1986,Fantascienza
-La fine dell'eternità,Romanzo,Nessuno,1955,20,978-8804297802,LibroLaFineDellEternità.jpg,SinossiLaFineDellEternità.txt,1955,Fantascienza
-Nemesis,Romanzo,Nessuno,1989,22,978-8804361206,LibroNemesis.jpg,SinossiNemesis.txt,1989,Fantascienza
-Notturno,Romanzo,Nessuno,1990,23,978-8804672317,LibroNotturno.jpg,SinossiNotturno.txt,1941,Fantascienza,
-Neanche gli dei,Romanzo,Nessuno,1972,21,978-8804406839,LibroNeancheGliDei.jpg,SinossiNeancheGliDei.txt,1972,Fantascienza,
-Galatea,Racconto,Nessuno,1987,9999,978-8804370536,LibroAzazel.jpg,SinossiGalatea.txt,1987,Fantasy
-La risatina ghiotta,Racconto,Nessuno,1974,9999, 978-8875211028,LibroIRaccontiDeiVedoviNeri.jpg,SinossiLaRisatinaGhiotta.txt,1974,Giallo
-A dire il vero,Racconto,Nessuno,1974,9999, 978-8875211028,LibroIRaccontiDeiVedoviNeri.jpg,SinossiADireIlVero.txt,1974,Giallo
-Robbie,Racconto,Nessuno,1940,1,978-8804519522,LibroIoRobot.jpg,SinossiRobbie.txt,1940,Fantascienza
-Circolo vizioso,Racconto,Nessuno,1940,2,978-8804519522,LibroIoRobot.jpg,SinossiCircoloVizioso.txt,1940,Fantascienza
-L'uomo bicentenario,Racconto,Nessuno,1976,3,978-0385190667,LibroAntologiaDelBicentenario.jpg,SinossiLUomoBicentenario.txt,1976,Fantascienza
-Superneutrone,Racconto,Nessuno,1956,9999,978-8804300786,LibroAsimovStory.jpg,SinossiSuperneutrone.txt,1956,Fantascienza
-Le matricole,Racconto,Nessuno,1957,9999,978-8804300786,LibroAsimovStory.jpg,SinossiLeMatricole.txt,1957,Fantascienza
-Lenny,Racconto,Nessuno,1958,4,978-8804536772,LibroIlSecondoLibroDeiRobot.jpg,SinossiLenny.txt,1958,Fantascienza
-Intuito femminile,Racconto,Nessuno,1969,5,978-8804536772,LibroIlSecondoLibroDeiRobot.jpg,SinossiIntuitoFemminile.txt,1969,Fantascienza
-Preludio alla fondazione,Romanzo,Fondazione,1988,13,978-8804401841,LibroPreludioAllaFondazione.jpg,SinossiPreludioAllaFondazione.txt,1988,Fantascienza
-Fondazione anno zero,Romanzo,Fondazione,1993,14,978-8804418054,LibroFondazioneAnnoZero.jpg,SinossiFondazioneAnnoZero.txt,1993,Fantascienza
-Catastrofi a scelta,Saggio,Nessuno,1979,9999,B00GXG2ICI,LibroCatastrofiAScelta.jpg,SinossiCatastrofiAScelta.txt,1979,Divulgazione
-Il cervello umano,Saggio,Nessuno,1964,9999,978-8845238833,LibroIlCervelloUmano.jpg,SinossiIlCervelloUmano.txt,1964,Divulgazione
-Il collasso dell'universo,Saggio,Nessuno,1977,9999,B0747L1KQB,LibroIlCollassoDellUniverso.jpg,SinossiIlCollassoDellUniverso.txt,1977,Divulgazione
+Abissi d'acciaio,Romanzo,Robot,9,6,978-8804403043,LibroAbissiDAcciaio.jpg,SinossiAbissiDAcciaio.txt,1954,Fantascienza
+Il sole nudo,Romanzo,Robot,12,7,978-8804398172,LibroIlSoleNudo.jpg,SinossiIlSoleNudo.txt,1957,Fantascienza
+I robot dell'alba,Romanzo,Robot,24,8,978-8804403036,LibroIRobotDellAlba.jpg,SinossiIRobotDellAlba.txt,1983,Fantascienza
+I robot e l'impero,Romanzo,Robot,25,9,978-88044115051,LibroIRobotELImpero.jpg,SinossiIRobotELImpero.txt,1985,Fantascienza
+Paria dei cieli,Romanzo,Impero,4,12,978-8804403005,LibroPariaDeiCieli.jpg,SinossiPariaDeiCieli.txt,1950,Fantascienza
+Il tiranno dei mondi,Romanzo,Impero,5,10,978-8804395966,LibroIlTirannoDeiMondi.jpg,SinossiIlTirannoDeiMondi.txt,1951,Fantascienza
+Le correnti dello spazio,Romanzo,Impero,7,11,978-8804406853,LibroLeCorrentiDelloSpazio.jpg,SinossiLeCorrentiDelloSpazio.txt,1952,Fantascienza
+Fondazione - Cronache della galassia,Romanzo,Fondazione,6,15,978-8804772941,LibroFondazione.jpg,SinossiFondazione.txt,1951,Fantascienza
+L'orlo della fondazione,Romanzo,Fondazione,23,18,978-8804398165,LibroLOrloDellaFondazione.jpg,SinossiLOrloDellaFondazione.txt,1982,Fantascienza
+La seconda fondazione - L'altra faccia della spirale,Romanzo,Fondazione,8,17,978-8804772972,LibroLaSecondaFondazione.jpg,SinossiLaSecondaFondazione.txt,1953,Fantascienza
+Fondazione e Impero - Il crollo della galassia centrale,Romanzo,Fondazione,3,16,978-8804772965,LibroFondazioneEImpero.jpg,SinossiFondazioneEImpero.txt,1945,Fantascienza
+Fondazione e Terra,Romanzo,Fondazione,26,19,978-8804403029,LibroFondazioneETerra.jpg,SinossiFondazioneETerra.txt,1986,Fantascienza
+La fine dell'eternità,Romanzo,Nessuno,10,20,978-8804297802,LibroLaFineDellEternità.jpg,SinossiLaFineDellEternità.txt,1955,Fantascienza
+Nemesis,Romanzo,Nessuno,29,22,978-8804361206,LibroNemesis.jpg,SinossiNemesis.txt,1989,Fantascienza
+Notturno,Romanzo,Nessuno,30,23,978-8804672317,LibroNotturno.jpg,SinossiNotturno.txt,1941,Fantascienza,
+Neanche gli dei,Romanzo,Nessuno,17,21,978-8804406839,LibroNeancheGliDei.jpg,SinossiNeancheGliDei.txt,1972,Fantascienza,
+Galatea,Racconto,Nessuno,27,9999,978-8804370536,LibroAzazel.jpg,SinossiGalatea.txt,1987,Fantasy
+La risatina ghiotta,Racconto,Nessuno,18,9999, 978-8875211028,LibroIRaccontiDeiVedoviNeri.jpg,SinossiLaRisatinaGhiotta.txt,1974,Giallo
+A dire il vero,Racconto,Nessuno,19,9999, 978-8875211028,LibroIRaccontiDeiVedoviNeri.jpg,SinossiADireIlVero.txt,1974,Giallo
+Robbie,Racconto,Robot,1,1,978-8804519522,LibroIoRobot.jpg,SinossiRobbie.txt,1940,Fantascienza
+Circolo vizioso,Racconto,Robot,2,2,978-8804519522,LibroIoRobot.jpg,SinossiCircoloVizioso.txt,1940,Fantascienza
+L'uomo bicentenario,Racconto,Robot,20,3,978-0385190667,LibroAntologiaDelBicentenario.jpg,SinossiLUomoBicentenario.txt,1976,Fantascienza
+Superneutrone,Racconto,Nessuno,11,9999,978-8804300786,LibroAsimovStory.jpg,SinossiSuperneutrone.txt,1956,Fantascienza
+Le matricole,Racconto,Nessuno,13,9999,978-8804300786,LibroAsimovStory.jpg,SinossiLeMatricole.txt,1957,Fantascienza
+Lenny,Racconto,Robot,14,4,978-8804536772,LibroIlSecondoLibroDeiRobot.jpg,SinossiLenny.txt,1958,Fantascienza
+Intuito femminile,Racconto,Robot,16,5,978-8804536772,LibroIlSecondoLibroDeiRobot.jpg,SinossiIntuitoFemminile.txt,1969,Fantascienza
+Preludio alla fondazione,Romanzo,Fondazione,28,13,978-8804401841,LibroPreludioAllaFondazione.jpg,SinossiPreludioAllaFondazione.txt,1988,Fantascienza
+Fondazione anno zero,Romanzo,Fondazione,31,14,978-8804418054,LibroFondazioneAnnoZero.jpg,SinossiFondazioneAnnoZero.txt,1993,Fantascienza
+Catastrofi a scelta,Saggio,Nessuno,22,9999,B00GXG2ICI,LibroCatastrofiAScelta.jpg,SinossiCatastrofiAScelta.txt,1979,Divulgazione
+Il cervello umano,Saggio,Nessuno,15,9999,978-8845238833,LibroIlCervelloUmano.jpg,SinossiIlCervelloUmano.txt,1964,Divulgazione
+Il collasso dell'universo,Saggio,Nessuno,21,9999,B0747L1KQB,LibroIlCollassoDellUniverso.jpg,SinossiIlCollassoDellUniverso.txt,1977,Divulgazione
