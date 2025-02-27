@@ -130,7 +130,11 @@ span.carousel-control-prev-icon {
     color: #0dcaf0;
     text-decoration: none;
 }
-  
+
+.mytext-link a {
+    text-decoration: none;
+}
+
 .mytext-link:hover {
     color: #0dcaf0;
     text-decoration: underline;
