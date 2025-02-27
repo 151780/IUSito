@@ -204,15 +204,15 @@
       <script>
         let libri = [];
         // Cartella immagini
-        const imgBaseUrl = "https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/img/";
+        const imgBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/img/";
         // const imgBaseUrl = "img/";
         // Cartella sinossi
-        const sinossiBaseUrl = "https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/data/sinossi/";
+        const sinossiBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/data/sinossi/";
         // const sinossiBaseUrl = "sinossi/";
         
         // Lettura file libri
-        function caricaCSV() {
-          $.get("https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/data/libri.csv", function(data) {
+        function caricaCSVLibri() {
+          $.get("https://raw.githubusercontent.com/151780/IUSito/main/data/libri.csv", function(data) {
           // $.get("data/libri.csv", function(data) {
               const righe = data.split("\n");
             libri = righe.slice(1).map(riga => {
@@ -229,7 +229,7 @@
               start: [minAnno, maxAnno]
             });
 
-            aggiornaCatalogo();
+            aggiornaCatalogoLibri();
           });
         }
         
@@ -255,7 +255,7 @@
         // Aggiornamento e scrittura libri filtrati su valori anni della linea del tempo
         slider.noUiSlider.on("update", function(values) {
           $("#annoRange").text(`${values[0]} - ${values[1]}`);
-          aggiornaCatalogo();
+          aggiornaCatalogoLibri();
         });
 
         // Funzione per leggere i parametri URL
@@ -265,7 +265,7 @@
         }
 
          // Aggiornamento e scrittura libri filtrati
-        function aggiornaCatalogo() {
+        function aggiornaCatalogoLibri() {
           const tipo = $("#filterTipo").val();
           const ciclo = $("#filterCiclo").val();
           const ordine = $("#filterOrdine").val();
@@ -298,7 +298,7 @@
         }
         
         $(document).ready(function() {
-          caricaCSV();
+          caricaCSVLibri();
 
           // Acquisisce valori dei filtri Titolo e ciclo
           const titoloFiltro = getParametro("filterTitle");
@@ -307,15 +307,15 @@
           // Se esiste un valore, imposta il campo input e aggiorna il catalogo
           if (titoloFiltro) {
               $("#filterTitle").val(titoloFiltro);
-              aggiornaCatalogo();  // Chiama la funzione che aggiorna i libri filtrati
+              aggiornaCatalogoLibri();  // Chiama la funzione che aggiorna i libri filtrati
           }
           if (cicloFiltro) {
               $("#filterCiclo").val(cicloFiltro);
-              aggiornaCatalogo();  // Chiama la funzione che aggiorna i libri filtrati
+              aggiornaCatalogoLibri();  // Chiama la funzione che aggiorna i libri filtrati
           }
 
 
-          $("#filterTipo, #filterCiclo, #filterOrdine, #filterTitle, #filterGenere").on("change", aggiornaCatalogo);
+          $("#filterTipo, #filterCiclo, #filterOrdine, #filterTitle, #filterGenere").on("change", aggiornaCatalogoLibri);
         });
       </script>
       <!-- Catalogo end -->

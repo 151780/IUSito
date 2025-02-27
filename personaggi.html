@@ -174,16 +174,16 @@
       <script>
         let personaggi = [];
         // Cartella immagini
-        const imgBaseUrl = "https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/img/";
+        const imgBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/img/";
         // const imgBaseUrl = "img/";
         // Cartella caratteri
-        const caratteriBaseUrl = "https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/data/caratteri/";
+        const caratteriBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/data/caratteri/";
         // const caratteriBaseUrl = "caratteri/";
         
         // Lettura file libri
-        function caricaCSV() {
-          $.get("https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/data/personaggi.csv", function(data) {
-          // $.get("data/libri.csv", function(data) {
+        function caricaCSVPersonaggi() {
+          $.get("https://raw.githubusercontent.com/151780/IUSito/main/data/personaggi.csv", function(data) {
+          // $.get("data/personaggi.csv", function(data) {
             const righe = data.split("\n");
             caratteri = righe.slice(1).map(riga => {
                 const [nome, genere, apparizione, img, link, ciclo] = riga.split(",");
@@ -246,7 +246,7 @@
         }
         
         $(document).ready(function() {
-          caricaCSV();
+          caricaCSVPersonaggi();
 
           // Acquisisce valori dei filtri Titolo e ciclo
           const titoloFiltro = getParametro("filterName");
