@@ -192,3 +192,14 @@ span.carousel-control-prev-icon {
     border-width: 4px !important;
     border-radius: 10px;
 }
+
+/* Immagini personaggi */
+.person-img {
+    object-fit: contain;
+}
+
+.person-img-box {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
