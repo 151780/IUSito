@@ -1,4 +1,4 @@
-Fondazione e Impero è il quarto libro del <link "https:\\pagina.html">Ciclo della Fondazione</link> 
+Fondazione e Impero è il quarto libro del <link "cicloFondazione.html">Ciclo della Fondazione</link> 
 che narra il tentativo dell'Impero di
 riprendersi dalla sua decadenza. I protagonisti
 della Fondazione si trovano a dover fronteggiare
