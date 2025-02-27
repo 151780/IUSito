@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="It">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/asimov.css"/>          <!-- personale -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>		<!-- Bootstrap -->
+
+    <!-- JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons&source=platform" async="async"></script>	<!-- ShareThis -->
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <!-- Titolo -->
+    <title> Isaac Asimov - Opere </title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Dublin Core -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+    <META name="DC.Title" content="Isaac Asimov"/>
+    <META name="DC.Creator" content="Roberto Mazzoni"/>
+    <META name="DC.Subject" content="Opere di Isaac Asimov"/>
+    <META name="DC.Description" content="Sito dedicato alle opere di Isaac Asimov"/>
+    <META name="DC.Publisher" content="github.com"/>
+    <META name="DC.Date" content="2025-03-19"/>
+    <META name="DC.Type" content="Produzione letteraria"/>
+    <META name="DC.Format" content="Sito web HTML"/>
+    <META name="DC.Source" content="Wikipedia"/>
+    <META name="DC.Language" content="it"/>
+
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
+
+  </head>
+  
+  <body>
+    <!-- Header -->
+    <header>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-4 p-0">
+            <img src="img/HeaderImg.jpg" class="img-fluid w-100" alt="Isaac Asimov">
+          </div>
+          <div class="col-8">
+            <h1 class="text-center mb-4"><strong>Isaac Asimov</strong></h2>
+            <h2 class="text-center mb-4">Le opere</h3>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- Header end -->
+    
+
+    <main>
+      <!-- Menu navigazione -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="NavBar">
+        <div class="container-fluid">
+          <!-- Logo / Home -->
+          <a class="navbar-brand" href="#">
+            <img src="img/IA.jpg" alt="Logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Voci menu -->
+          <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <!-- Home -->
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <!-- Opere -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Opere</a>
+              </li>
+              <!-- Cicli con dropdown su ciclo -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cicloRobot.html">Ciclo dei Robot</a></li>
+                  <li><a class="dropdown-item" href="cicloFondazione.html">Ciclo della Fondazione</a></li>
+                  <li><a class="dropdown-item" href="cicloImpero.html">Ciclo dell'Impero</a></li>
+              </ul>
+              </li>
+              <!-- Personaggi -->
+              <li class="nav-item">
+                <a class="nav-link" href="personaggi.html">Personaggi</a>
+              </li>
+              <!-- Premi -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Premi</a>
+              </li>
+              <!-- Adattamenti -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Adattamenti</a>
+              </li>
+              <!-- Extra con dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Extra</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Leggi della robotica</a></li>
+                  <li><a class="dropdown-item" href="#">Psicostoria</a></li>
+                  <li><a class="dropdown-item" href="#">Collaborazioni</a></li>
+                  <li><a class="dropdown-item" href="#">Associazioni</a></li>
+                </ul>
+              </li>
+
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Menu navigazione end -->
+
+      <!-- Breadcrumbs -->
+      <div class="container-fluid px-3 my-3 w-90 mx-auto">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Opere</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- Breadcrumbs end -->
+      
+      <!-- Catalogo -->
+      <section class="container-fluid px-3 my-3 w-90 mx-auto">
+        <div class="row">
+          <!-- Barra del tempo -->
+          <div class="col-md-2 bg-light p-4">
+          </div>
+          <div class="col-md-10 bg-light text-center p-4">
+            <div id="sliderAnno" style="width: 100%; margin: auto;"></div>
+            <label for="sliderAnno" class="form-label">Periodo: <span id="annoRange">Tutti</span></label>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Filtri -->
+          <div class="col-md-2 bg-info text-white p-4">
+            <h5>Filtra per</h5>
+            <label for="filterTipo" class="form-label">Tipo</label>
+            <!-- per tipo -->
+            <select id="filterTipo" class="form-select">
+              <option value="">Tutti</option>
+              <option value="Romanzo">Romanzo</option>
+              <option value="Racconto">Racconto</option>
+              <option value="Saggio">Saggio</option>
+            </select>
+            <!-- per ciclo -->
+            <label for="filterCiclo" class="form-label mt-2">Ciclo</label>
+            <select id="filterCiclo" class="form-select">
+              <option value="">Tutti</option>
+              <option value="Robot">Robot</option>
+              <option value="Fondazione">Fondazione</option>
+              <option value="Impero">Impero</option>
+              <option value="Nessuno">Nessuno</option>
+            </select>
+            <!-- per genere -->
+            <label for="filterGenere" class="form-label mt-2">Genere:</label>
+            <select id="filterGenere" class="form-select">
+              <option value="">Tutti</option>
+              <option value="Fantascienza">Fantascienza</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Giallo">Giallo</option>
+              <option value="Divulgazione">Divulgazione</option>
+            </select>
+            <!-- per ordine di lettura -->
+            <label for="filterOrdine" class="form-label mt-2">Ordine di lettura</label>
+            <select id="filterOrdine" class="form-select">
+              <option value="1">Cronologica</option>
+              <option value="2">Logica</option>
+            </select>
+            <!-- per ricerca sul titolo -->
+            <label for="filterTitle" class="form-label mt-2">Titolo</label>
+            <input type="text" id="filterTitle" class="form-control" placeholder="Cerca nel titolo">
+          </div>
+
+          <!-- Elenco -->
+          <div class="col-md-10 bg-light p-4">
+              <div class="row" id="catalogo"></div>
+          </div>
+        </div>
+      </section>
+    
+      <script>
+        let libri = [];
+        // Cartella immagini
+        const imgBaseUrl = "https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/img/";
+        // const imgBaseUrl = "img/";
+        // Cartella sinossi
+        const sinossiBaseUrl = "https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/data/sinossi/";
+        // const sinossiBaseUrl = "sinossi/";
+        
+        // Lettura file libri
+        function caricaCSV() {
+          $.get("https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/data/libri.csv", function(data) {
+          // $.get("data/libri.csv", function(data) {
+              const righe = data.split("\n");
+            libri = righe.slice(1).map(riga => {
+                const [titolo, tipo, ciclo, ordine1, ordine2, isbn, img, link, anno, genere] = riga.split(",");
+                return { titolo, tipo, ciclo, ordine1, ordine2, isbn, img : imgBaseUrl + img, link : sinossiBaseUrl + link, anno, genere};
+            });
+
+            // Range anni e aggiornamento slider
+            const anni = libri.map(l => l.anno).filter(a => !isNaN(a));
+            minAnno = Math.min(...anni);
+            maxAnno = Math.max(...anni);
+            slider.noUiSlider.updateOptions({
+              range: { min: minAnno, max: maxAnno },
+              start: [minAnno, maxAnno]
+            });
+
+            aggiornaCatalogo();
+          });
+        }
+        
+        // Slider
+        let minAnno = 1900, maxAnno = 2100; 
+        const slider = document.getElementById("sliderAnno");
+
+        noUiSlider.create(slider, {
+          start: [minAnno, maxAnno], 
+          connect: true, 
+          range: {
+            "min": minAnno,
+            "max": maxAnno
+          },
+          step: 1,
+          tooltips: [true, true],
+          format: {
+            to: value => Math.round(value),
+            from: value => Number(value)
+          }
+        });
+
+        // Aggiornamento e scrittura libri filtrati su valori anni della linea del tempo
+        slider.noUiSlider.on("update", function(values) {
+          $("#annoRange").text(`${values[0]} - ${values[1]}`);
+          aggiornaCatalogo();
+        });
+
+        // Funzione per leggere i parametri URL
+        function getParametro(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+         // Aggiornamento e scrittura libri filtrati
+        function aggiornaCatalogo() {
+          const tipo = $("#filterTipo").val();
+          const ciclo = $("#filterCiclo").val();
+          const ordine = $("#filterOrdine").val();
+          const titoloFiltro = $("#filterTitle").val().toLowerCase();
+          const genereFiltro = $("#filterGenere").val().trim(); 
+          const [annoInizio, annoFine] = slider.noUiSlider.get().map(Number);
+          
+          let libriFiltrati = libri.filter(l => 
+            (titoloFiltro === "" || l.titolo.toLowerCase().includes(titoloFiltro)) &&
+            (tipo === "" || l.tipo === tipo) && 
+            (ciclo === "" || l.ciclo === ciclo) &&
+            (genereFiltro === "" || l.genere.trim() === genereFiltro) &&
+            (l.anno >= annoInizio && l.anno <= annoFine)
+            );
+          
+          libriFiltrati.sort((a, b) => a[`ordine${ordine}`] - b[`ordine${ordine}`]);
+          
+          $("#catalogo").html(libriFiltrati.map(l => `
+            <div class="col-md-3 mb-3">
+              <div class="card">
+                <a href="dettagli.html?titolo=${encodeURIComponent(l.titolo)}&tipo=${encodeURIComponent(l.tipo)}&ciclo=${encodeURIComponent(l.ciclo)}&ordine1=${l.ordine1}&ordine2=${l.ordine2}&isbn=${l.isbn}&img=${encodeURIComponent(l.img)}&link=${encodeURIComponent(l.link)}&anno=${encodeURIComponent(l.anno)}&genere=${encodeURIComponent(l.genere)}" target="_blank">
+                  <img src="${l.img}" class="card-img-top img-fluid" style="height: 200px; width: 100%; object-fit: contain;">
+                </a>
+                <div class="card-body text-center">
+                  <h6 class="card-title">${l.titolo}</h6>
+                </div>
+              </div>
+            </div>
+          `).join(""));
+        }
+        
+        $(document).ready(function() {
+          caricaCSV();
+
+          // Acquisisce valori dei filtri Titolo e ciclo
+          const titoloFiltro = getParametro("filterTitle");
+          const cicloFiltro = getParametro("filterCiclo");
+
+          // Se esiste un valore, imposta il campo input e aggiorna il catalogo
+          if (titoloFiltro) {
+              $("#filterTitle").val(titoloFiltro);
+              aggiornaCatalogo();  // Chiama la funzione che aggiorna i libri filtrati
+          }
+          if (cicloFiltro) {
+              $("#filterCiclo").val(cicloFiltro);
+              aggiornaCatalogo();  // Chiama la funzione che aggiorna i libri filtrati
+          }
+
+
+          $("#filterTipo, #filterCiclo, #filterOrdine, #filterTitle, #filterGenere").on("change", aggiornaCatalogo);
+        });
+      </script>
+      <!-- Catalogo end -->
+    </main>
+
+    <!-- Footer -->
+    <div class="container-fluid">
+
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-info">
+        <div class="col mb-3">
+          <a href="#">
+            <img src="img/IA.jpg" alt="Logo" height="40">
+          </a>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Ente</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sede</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Indirizzo</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contattaci</a></li>
+          </ul>
+        </div>
+
+    
+        <div class="col mb-3">
+          <h5>Disclaimer</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Informativa</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Crediti</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Link utili</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Web Project Plan</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">UniBO</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bootstrap</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Social</h5>
+          <div class="sharethis-inline-follow-buttons text-start"></div>
+        </div>
+      </footer>
+    </div>
+    <!-- Footer end -->
+  </body>
+</html>

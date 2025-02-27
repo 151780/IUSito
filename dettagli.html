@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/asimov.css"/>          <!-- personale -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>		<!-- Bootstrap -->
+
+		<!-- JS -->
+		<script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
+		<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons&source=platform" async="async"></script>	<!-- ShareThis -->
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+
+		<!-- Titolo -->
+		<title> Isaac Asimov - Dettaglio </title>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+		<!-- Dublin Core -->
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+		<META name="DC.Title" content=""/>
+		<META name="DC.Creator" content="Isaac Asimov"/>
+		<META name="DC.Subject" content=""/>
+		<META name="DC.Description" content=""/>
+		<META name="DC.Date" content=""/>
+		<META name="DC.Type" content=""/>
+		<META name="DC.Format" content="Documento cartaceo"/>
+		<META name="DC.Language" content="it"/>
+	</head>
+        
+	<body>
+		<!-- Header -->
+		<header>
+			<section class="container-fluid">
+				<div class="row">
+					<div class="col-4 p-0">
+						<img src="img/HeaderImg.jpg" class="img-fluid w-100" alt="Isaac Asimov">
+					</div>
+					<div class="col-8">
+						<h1 class="text-center mb-4"><strong>Isaac Asimov</strong></h2>
+						<h2 class="text-center mb-4">Le opere</h3>
+					</div>
+				</div>
+			</section>
+		</header>
+		<!-- Header end -->
+
+		<main>
+			<!-- Menu navigazione -->
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="NavBar">
+				<div class="container-fluid">
+					<!-- Logo / Home -->
+					<a class="navbar-brand" href="#">
+						<img src="img/IA.jpg" alt="Logo" height="40">
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- Voci menu -->
+					<div class="collapse navbar-collapse" id="navbarsExample04">
+						<ul class="navbar-nav me-auto mb-2 mb-md-0">
+							<!-- Home -->
+							<li class="nav-item">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<!-- Opere -->
+							<li class="nav-item">
+								<a class="nav-link" href="opere.html">Opere</a>
+							</li>
+							<!-- Cicli con dropdown su ciclo -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Ciclo dei Robot</a></li>
+									<li><a class="dropdown-item" href="#">Ciclo della Fondazione</a></li>
+									<li><a class="dropdown-item" href="#">Ciclo dell'Impero</a></li>
+								</ul>
+							</li>
+							<!-- Personaggi -->
+							<li class="nav-item">
+								<a class="nav-link" href="#">Personaggi</a>
+							</li>
+							<!-- Premi -->
+							<li class="nav-item">
+								<a class="nav-link" href="#">Premi</a>
+							</li>
+							<!-- Adattamenti -->
+							<li class="nav-item">
+								<a class="nav-link" href="#">Adattamenti</a>
+							</li>
+							<!-- Extra con dropdown -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Extra</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Leggi della robotica</a></li>
+									<li><a class="dropdown-item" href="#">Psicostoria</a></li>
+									<li><a class="dropdown-item" href="#">Collaborazioni</a></li>
+									<li><a class="dropdown-item" href="#">Associazioni</a></li>
+								</ul>
+							</li>
+
+								<!-- <li class="nav-item">
+										<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+								</li> -->
+						</ul>
+						<form role="search">
+							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+						</form>
+					</div>
+				</div>
+			</nav>
+			<!-- Menu navigazione end -->
+
+			<!-- Breadcrumbs -->
+			<div class="container-fluid px-3 my-3 w-90 mx-auto">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+						<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+						<li class="breadcrumb-item"><a href="opere.html">Opere</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Dettaglio</li>
+					</ol>
+				</nav>
+			</div>
+			<!-- Breadcrumbs end -->
+		</main>
+	</body>
+
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script>
+			function getQueryParams() {
+				const params = new URLSearchParams(window.location.search);
+				return {
+					titolo: params.get("titolo"),
+					tipo: params.get("tipo"),
+					ciclo: params.get("ciclo"),
+					ordine1: params.get("ordine1"),
+					ordine2: params.get("ordine2"),
+					isbn: params.get("isbn"),
+					img: params.get("img"),
+					link: params.get("link"),
+					anno: params.get("anno"),
+					genere: params.get("genere")
+				};
+			}
+
+			function formatLinks(text) {
+      			return text.replace(/<link\s+\"(.*?)\">(.*?)<\/link>/g, '<a href="$1" target="_blank" class="mytext-link">$2</a>');
+    		}
+
+			function mostraDettagli() {
+				const libro = getQueryParams();
+				const dataCompleta = libro.anno ? `${libro.anno}-01-01` : "";
+				const cicloLink = document.getElementById("cicloLink");
+
+				document.getElementById("titolo").innerText = libro.titolo;
+				document.getElementById("tipo").innerText = libro.tipo;
+				document.getElementById("ciclo").innerText = libro.ciclo;
+				document.getElementById("ordine1").innerText = libro.ordine1;
+				document.getElementById("ordine2").innerText = libro.ordine2 > 1000 ? "-" : libro.ordine2;
+				document.getElementById("isbn").innerText = libro.isbn;
+				document.getElementById("copertina").src = libro.img;
+				document.getElementById("anno").innerText = libro.anno;
+				document.getElementById("genere").innerText = libro.genere;
+
+				document.querySelector('meta[name="DC.Title"]').setAttribute("content", libro.titolo);
+				document.querySelector('meta[name="DC.Subject"]').setAttribute("content", libro.genere);
+				document.querySelector('meta[name="DC.Description"]').setAttribute("content", libro.ciclo);
+				document.querySelector('meta[name="DC.Date"]').setAttribute("content", dataCompleta);
+				document.querySelector('meta[name="DC.Type"]').setAttribute("content", libro.tipo);
+
+				if (libro.ciclo && libro.ciclo.toLowerCase() !== "nessuno") {
+					url = "ciclo" + encodeURIComponent(libro.ciclo) + ".html";
+					cicloLink.href = url;
+					cicloLink.style.display = "inline";
+				} else {
+					cicloLink.style.display = "none";
+				}				
+
+				// Carica la sinossi
+				fetch(libro.link)
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById("sinossi").innerHTML = formatLinks(data);
+					})
+					.catch(error => {
+						document.getElementById("sinossi").innerText = "Sinossi non disponibile.";
+					});
+			}
+    </script>
+
+	<!-- <body onload="mostraDettagli()" class="container mt-4"> -->
+	<body onload="mostraDettagli()" class="container-fluid">
+		<h1 id="titolo" class="text-center mb-4"></h1>
+		<div class="row align-items-start">
+			<div class="col-md-4 text-center">
+				<img id="copertina" class="img-fluid" style="max-height: 400px;">
+			</div>
+			<div class="col-md-8">
+				<p><span style="display: inline-block; width: 200px;">Tipo</span> <strong id="tipo"></strong></p>
+				<p><span style="display: inline-block; width: 200px;">Genere</span> <strong id="genere"></strong></p>
+				<p>
+					<span style="display: inline-block; width: 200px;">Ciclo</span> 
+					<a id="cicloLink" href="#" target="_blank"><strong id="ciclo"></strong></a>
+				</p>
+				<p><span style="display: inline-block; width: 200px;">Anno di pubblicazione</span> <strong id="anno"></strong></p>
+				<p><span style="display: inline-block; width: 200px;">ISBN</span> <strong id="isbn"></strong></p>
+				<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Cronologico</span> <strong id="ordine1"></strong></p>
+				<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Logico</span> <strong id="ordine2"></strong></p>
+				<p><span>Sinossi</strong>
+				<p id="sinossi">Caricamento sinossi...</p>			</div>
+		</div>
+	</body>
+	
+	<!-- Footer -->
+	<div class="container-fluid">
+		<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-info">
+			<div class="col mb-3">
+				<a href="#">
+					<img src="img/IA.jpg" alt="Logo" height="40">
+				</a>
+			</div>
+
+			<div class="col mb-3">
+				<h5>Ente</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sede</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Indirizzo</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contattaci</a></li>
+				</ul>
+			</div>
+		
+			<div class="col mb-3">
+				<h5>Disclaimer</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Informativa</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Crediti</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+				</ul>
+			</div>
+		
+			<div class="col mb-3">
+				<h5>Link utili</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Web Project Plan</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">UniBO</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bootstrap</a></li>
+				</ul>
+			</div>
+
+			<div class="col mb-3">
+				<h5>Social</h5>
+				<div class="sharethis-inline-follow-buttons text-start"></div>
+			</div>
+		</footer>
+	</div>
+	  <!-- Footer end -->
+	  
+</html>

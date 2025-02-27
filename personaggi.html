@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="It">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/asimov.css"/>          <!-- personale -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>		<!-- Bootstrap -->
+
+    <!-- JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons&source=platform" async="async"></script>	<!-- ShareThis -->
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <!-- Titolo -->
+    <title> Isaac Asimov - Personaggi </title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Dublin Core -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+    <META name="DC.Title" content="Isaac Asimov"/>
+    <META name="DC.Creator" content="Roberto Mazzoni"/>
+    <META name="DC.Subject" content="Personaggi di Isaac Asimov"/>
+    <META name="DC.Description" content="Sito dedicato alle opere di Isaac Asimov"/>
+    <META name="DC.Publisher" content="github.com"/>
+    <META name="DC.Date" content="2025-03-19"/>
+    <META name="DC.Type" content="Produzione letteraria"/>
+    <META name="DC.Format" content="Sito web HTML"/>
+    <META name="DC.Source" content="Wikipedia"/>
+    <META name="DC.Language" content="it"/>
+
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
+
+  </head>
+  
+  <body>
+    <!-- Header -->
+    <header>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-4 p-0">
+            <img src="img/HeaderImg.jpg" class="img-fluid w-100" alt="Isaac Asimov">
+          </div>
+          <div class="col-8">
+            <h1 class="text-center mb-4"><strong>Isaac Asimov</strong></h2>
+            <h2 class="text-center mb-4">I personaggi</h3>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- Header end -->
+    
+
+    <main>
+      <!-- Menu navigazione -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="NavBar">
+        <div class="container-fluid">
+          <!-- Logo / Home -->
+          <a class="navbar-brand" href="#">
+            <img src="img/IA.jpg" alt="Logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Voci menu -->
+          <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <!-- Home -->
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <!-- Opere -->
+              <li class="nav-item">
+                <a class="nav-link" href="opere.html">Opere</a>
+              </li>
+              <!-- Cicli con dropdown su ciclo -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cicloRobot.html">Ciclo dei Robot</a></li>
+                  <li><a class="dropdown-item" href="cicloFondazione.html">Ciclo della Fondazione</a></li>
+                  <li><a class="dropdown-item" href="cicloImpero.html">Ciclo dell'Impero</a></li>
+              </ul>
+              </li>
+              <!-- Personaggi -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Personaggi</a>
+              </li>
+              <!-- Premi -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Premi</a>
+              </li>
+              <!-- Adattamenti -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Adattamenti</a>
+              </li>
+              <!-- Extra con dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Extra</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Leggi della robotica</a></li>
+                  <li><a class="dropdown-item" href="#">Psicostoria</a></li>
+                  <li><a class="dropdown-item" href="#">Collaborazioni</a></li>
+                  <li><a class="dropdown-item" href="#">Associazioni</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Menu navigazione end -->
+
+      <!-- Breadcrumbs -->
+      <div class="container-fluid px-3 my-3 w-90 mx-auto">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Personaggi</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- Breadcrumbs end -->
+      
+      <!-- Catalogo -->
+      <section class="container-fluid px-3 my-3 w-100 mx-auto">
+       <div class="row">
+          <!-- Filtri -->
+          <div class="col-md-2 bg-info text-white p-4">
+            <h5>Filtra per</h5>
+            <!-- per ciclo -->
+            <label for="filterCiclo" class="form-label mt-2">Ciclo</label>
+            <select id="filterCiclo" class="form-select">
+              <option value="">Tutti</option>
+              <option value="Robot">Robot</option>
+              <option value="Fondazione">Fondazione</option>
+              <option value="Impero">Impero</option>
+              <option value="Nessuno">Nessuno</option>
+            </select>
+            <!-- per genere -->
+            <label for="filterGenere" class="form-label mt-2">Genere:</label>
+            <select id="filterGenere" class="form-select">
+              <option value="">Tutti</option>
+              <option value="Umano">Umano</option>
+              <option value="Robot">Robot</option>
+            </select>
+            <!-- per ricerca sul nome -->
+            <label for="filterName" class="form-label mt-2">Nome</label>
+            <input type="text" id="filterName" class="form-control" placeholder="Cerca nel nome">
+          </div>
+
+          <!-- Elenco -->
+          <div class="col-md-10 bg-light p-4">
+              <div class="row" id="catalogo"></div>
+          </div>
+        </div>
+      </section>
+    
+      <script>
+        let personaggi = [];
+        // Cartella immagini
+        const imgBaseUrl = "https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/img/";
+        // const imgBaseUrl = "img/";
+        // Cartella caratteri
+        const caratteriBaseUrl = "https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/data/caratteri/";
+        // const caratteriBaseUrl = "caratteri/";
+        
+        // Lettura file libri
+        function caricaCSV() {
+          $.get("https://raw.githubusercontent.com/151780/InformaticaUmanistica/main/data/personaggi.csv", function(data) {
+          // $.get("data/libri.csv", function(data) {
+            const righe = data.split("\n");
+            caratteri = righe.slice(1).map(riga => {
+                const [nome, genere, apparizione, img, link, ciclo] = riga.split(",");
+                return {nome, genere, apparizione, img : imgBaseUrl + img, link : caratteriBaseUrl + link, ciclo, carattere:""};
+            });
+            caricaCaratteri();
+          });
+        }
+        
+        // Funzione per leggere i parametri URL
+        function getParametro(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function caricaCaratteri() {
+          let richieste = caratteri.map(p => 
+              $.get(p.link)
+              .then(carattere => {
+                  p.carattere = carattere; // Salva il contenuto del file
+              })
+              .fail(() => {
+                  p.carattere = "Errore nel caricamento del file"; // Se il file non viene trovato
+              })
+          );
+          Promise.all(richieste).then(aggiornaCatalogo);
+        }
+
+         // Aggiornamento e scrittura libri filtrati
+        function aggiornaCatalogo() {
+          const cicloFiltro = $("#filterCiclo").val().trim();
+          const nomeFiltro = $("#filterName").val().toLowerCase();
+          const genereFiltro = $("#filterGenere").val().trim(); 
+          
+          let carFiltrati = caratteri.filter(l => 
+            (nomeFiltro === "" || l.nome.toLowerCase().includes(nomeFiltro)) &&
+            (cicloFiltro === "" || l.ciclo === cicloFiltro) &&
+            (genereFiltro === "" || l.genere.trim() === genereFiltro)
+            );
+
+          $("#catalogo").html(carFiltrati.map((l, index) => `
+              <div class="col-md-11 d-flex align-items-center">
+                <div class="d-flex w-100 mb-3">
+                  <div class="me-3">
+                    <img src="${l.img}" class="img-fluid" style="height: 150px; width: 150px; object-fit: contain;">
+                  </div>
+                  <div>
+                    <p>
+                      <span style="display: inline-block; width: 250px;">Nome: <strong>${l.nome}</strong></span> 
+                      <span style="display: inline-block; width: 250px;">Genere: <strong>${l.genere}</strong></span>
+                      <span style="display: inline-block; width: 250px;">Ciclo: <strong>${l.ciclo}</strong></span>
+                    </p>
+                    <p>
+                      ${l.carattere}
+                    </p>
+                  </div>
+                </div>
+              </div>
+          `).join(""));
+        }
+        
+        $(document).ready(function() {
+          caricaCSV();
+
+          // Acquisisce valori dei filtri Titolo e ciclo
+          const titoloFiltro = getParametro("filterName");
+          const cicloFiltro = getParametro("filterCiclo");
+
+          // Se esiste un valore, imposta il campo input e aggiorna il catalogo
+          if (titoloFiltro) {
+              $("#filterName").val(titoloFiltro);
+              // aggiornaCatalogo();  // Chiama la funzione che aggiorna i libri filtrati
+          }
+          if (cicloFiltro) {
+              $("#filterCiclo").val(cicloFiltro);
+              // aggiornaCatalogo();  // Chiama la funzione che aggiorna i libri filtrati
+          }
+
+
+          $("#filterCiclo, #filterName, #filterGenere").on("change", aggiornaCatalogo);
+        });
+      </script>
+      <!-- Catalogo end -->
+    </main>
+
+    <!-- Footer -->
+    <div class="container-fluid">
+
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-info">
+        <div class="col mb-3">
+          <a href="#">
+            <img src="img/IA.jpg" alt="Logo" height="40">
+          </a>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Ente</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sede</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Indirizzo</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contattaci</a></li>
+          </ul>
+        </div>
+
+    
+        <div class="col mb-3">
+          <h5>Disclaimer</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Informativa</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Crediti</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Link utili</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Web Project Plan</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">UniBO</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bootstrap</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Social</h5>
+          <div class="sharethis-inline-follow-buttons text-start"></div>
+        </div>
+      </footer>
+    </div>
+    <!-- Footer end -->
+  </body>
+</html>
