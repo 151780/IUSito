@@ -207,3 +207,51 @@ span.carousel-control-prev-icon {
     height: 150px;
     overflow: hidden;
 }
+
+/* WPP */
+.myidx-link-1 {
+    color: #0dcaf0;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.myidx-link-1 a {
+    text-decoration: none;
+}
+
+.myidx-link-1:hover {
+    color: #0dcaf0;
+    text-decoration: underline;
+}
+
+.myidx-link-2 {
+    color: #0dcaf0;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.myidx-link-2 a {
+    text-decoration: none;
+}
+
+.myidx-link-2:hover {
+    color: #0dcaf0;
+    text-decoration: underline;
+}
+
+.myidx-link-3 {
+    color: #0dcaf0;
+    text-decoration: none;
+    /* font-weight: bold; */
+    font-style: italic;
+}
+
+.myidx-link-3 a {
+    text-decoration: none;
+}
+
+.myidx-link-3:hover {
+    color: #0dcaf0;
+    text-decoration: underline;
+}
