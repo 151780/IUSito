@@ -165,14 +165,14 @@ span.carousel-control-prev-icon {
     font-size: 14px !important;
 }
 
-.main-iframe {
+/* .main-iframe {
     height: 200px;
     border: 2px solid white;
 }
 
 .iframe-text-padding {
     padding-top: 20px;
-}
+} */
 
 .transparent-bg {
     background-color: rgba(0, 0, 0, 0.5);
@@ -255,3 +255,18 @@ span.carousel-control-prev-icon {
     color: #0dcaf0;
     text-decoration: underline;
 }
+
+.sticky-filters {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  /* Per schermi più piccoli (es. mobile) */
+@media (max-width: 768px) {
+    .carousel-inner img {
+      height: 60vh; /* Imposta un'altezza più alta per il mobile */
+    }
+  }
