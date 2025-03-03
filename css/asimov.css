@@ -256,13 +256,6 @@ span.carousel-control-prev-icon {
     text-decoration: underline;
 }
 
-.sticky-filters {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    z-index: 999;
-  }
 
   /* Per schermi più piccoli (es. mobile) */
 @media (max-width: 768px) {
