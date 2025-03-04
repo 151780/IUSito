@@ -17,10 +17,11 @@ body {
 }
 
 /* Barra di navigazione */
+
 .navbar-nav .nav-link {
     font-size: 18px;
     font-weight: 500;
-    padding: 10px 15px;
+    padding: 5px 5px;
     color: #0dcaf0 !important;
 }
 
@@ -36,8 +37,8 @@ body {
 }
 
 .navbar .dropdown-menu .dropdown-item {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 5px 10px;
 }
 
 .dropdown-menu {
@@ -191,14 +192,7 @@ span.carousel-control-prev-icon {
     font-size: 14px !important;
 }
 
-/* .main-iframe {
-    height: 200px;
-    border: 2px solid white;
-}
 
-.iframe-text-padding {
-    padding-top: 20px;
-} */
 
 .transparent-bg {
     background-color: rgba(0, 0, 0, 0.5);
