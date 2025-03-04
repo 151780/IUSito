@@ -196,6 +196,7 @@
 					.then(response => response.text())
 					.then(data => {
 						document.getElementById("sinossi").innerHTML = formatLinks(data);
+						document.querySelector('meta[name="DC.Description"]').setAttribute("content", data);
 					})
 					.catch(error => {
 						document.getElementById("sinossi").innerText = "Sinossi non disponibile.";

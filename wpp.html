@@ -164,25 +164,10 @@
 						<a href="#benchmark" class="myidx-link-1" title="vai al benchmark">Benchmark</a>
 						<ol>
 							<li><a href="#sito1" class="myidx-link-2" title="vai al benchmark">www.isaacasimov.it</a></li>
-								<ol>
-									<li><a href="#sito1idea" class="myidx-link-3" title="vai al benchmark">Idea</a></li>
-									<li><a href="#sito1contenuti" class="myidx-link-3" title="vai al benchmark">Contenuti</a></li>
-									<li><a href="#sito1design" class="myidx-link-3" title="vai al benchmark">Design</a></li>
-									<li><a href="#sito1tecnologia" class="myidx-link-3" title="vai al benchmark">Tecnologia</a></li>
-								</ol>
 							<li><a href="#sito2" class="myidx-link-2" title="vai al benchmark">www.asimovonline.com</a></li>
-								<ol>
-									<li><a href="#sito2idea" class="myidx-link-3" title="vai al benchmark">Idea</a></li>
-									<li><a href="#sito2contenuti" class="myidx-link-3" title="vai al benchmark">Contenuti</a></li>
-									<li><a href="#sito2design" class="myidx-link-3" title="vai al benchmark">Design</a></li>
-									<li><a href="#sito2tecnologia" class="myidx-link-3" title="vai al benchmark">Tecnologia</a></li>
-								</ol>
 						</ol>
 					</li>
-				</ol>
-			</div>
-			<div class="col-md-3">
-				<ol start="4">
+					<p></p>
 					<li>
 						<a href="#struttura" class="myidx-link-1" title="vai alla struttura">Struttura</a>
 						<ol>
@@ -193,12 +178,19 @@
 							<li><a href="#categorie" class="myidx-link-2" title="vai alle categorie">Categorie</a></li>
 						</ol>
 					</li>
-					<p></p>
+				</ol>
+			</div>
+			<div class="col-md-3">
+				<ol start="5">
 					<li>
 						<a href="#layout" class="myidx-link-1" title="vai al layout">Layout</a>
 						<ol>
-							<li><a href="#wireframe" class="myidx-link-2" title="vai ai wireframe">Wireframe</a></li>
-							<li><a href="#formati" class="myidx-link-2" title="vai ai formati">Formati</a></li>
+							<li><a href="#wfindex" class="myidx-link-2" title="vai al wireframe index">Wireframe homepage</a></li>
+							<li><a href="#wfopere" class="myidx-link-2" title="vai al wireframe opere">Wireframe opere</a></li>
+							<li><a href="#wfdettagli" class="myidx-link-2" title="vai al wireframe dettagli">Wireframe dettaglio opera</a></li>
+							<li><a href="#wfpersonaggi" class="myidx-link-2" title="vai al wireframe personaggi">Wireframe personaggi</a></li>
+							<li><a href="#wfciclo" class="myidx-link-2" title="vai al wireframe ciclo">Wireframe ciclo</a></li>
+							<li><a href="#wfextra" class="myidx-link-2" title="vai al wireframe extra">Wireframe other</a></li>
 						</ol>
 					</li>
 					<p></p>
@@ -369,6 +361,105 @@
 			<h5 class="mt-1" id="modellorelazionale"><strong><em>4.3 Modello relazionale</em></strong></h5>
 			<p><img src="img/ModelloRelazionale.jpg" class="img-fluid mx-auto d-block p-5" alt="Modello Relazionale"></p>
 
+			<h5 class="mt-1" id="dipendenze"><strong><em>4.4 Schema dipendenze</em></strong></h5>
+			<p><img src="img/SchemaDipendenze.jpg" class="img-fluid mx-auto d-block p-5" alt="Schema Dipendenze"></p>
+
+			<h5 class="mt-1" id="categorie"><strong><em>4.5 Categorie</em></strong></h5>
+			<p mt-2 pl-5>
+				Le categorie descrittive DC di ogni opera sono le seguenti:
+				<ul>
+					<li><strong>Title</strong>: titolo</li>
+					<li><strong>Creator</strong>: autore</li>
+					<li><strong>Subject</strong>: genere (Fantascienza, Giallo, Divulgazione, Fantasy)</li>
+					<li><strong>Description:</strong> sinossi</li>
+					<li><strong>Date</strong>: data di prima pubblicazione</li>
+					<li><strong>Type</strong>: tipo (Romanzo, Racconto, Saggio)</li>
+					<li><strong>Format</strong>: formato</li>
+					<li><strong>Language</strong>: lingua</li>
+				</ul>
+				Si possono integrare questi descrittori con ulteriori Creator in caso di collaborazione con altri autori da parte di Asimov; 
+				si può anche valutare l'inserimento di un ulteriore descrittore che contenga il ciclo cui appartiene l'opera.
+			</p>
+
+
+		<!-- Layout -->
+		<h5 class="mt-3" id="layout"><strong>5. Layout</strong></h5>
+		<p mt-2 pl-5>
+			Tutte le pagine sono composte da un header, un corpo e un footer. <br />
+			L'header della home page contiene un'immagine a tutta larghezza, gli header delle pagine dipendenti contengono la stessa immagine 
+			ridotta in dimensioni sul lato sinistro e sul lato destro l'argomento della pagina. <br />
+			Al di sotto troviamo in tutte le pagine una barra menu di navigazione che rimane bloccata
+			al top dello schermo durante lo scroll verticale. Nella stessa barra è incluso anche un campo di ricerca testuale; 
+			tutte le pagine dipendenti presentano sotto la barra menu di navigazione i breadcrumbs <br />
+			Il footer è lo stesso per tutte le pagine e include disclaimer, FAQs, collegamenti a siti utili, follow bar per i social.
+		</p>
+			<h5 class="mt-1" id="wireframe"><strong><em>5.1 Wireframes</em></strong></h5>
+				<h5 class="mt-1" id="wfindex"><em>5.1.1 Home page index.html</em></h5>
+				<p>
+					Il corpo della pagina è diviso in quattro sezioni:
+					<ul>
+						<li>breve presentazione dello scrittore con link alla biografia</li>
+						<li>carosello che presenta le leggi della robotica con link alla pagina dedicata</li>
+						<li>breve presentazione della produzione letteraria di Asimov con 
+							contenitore dei top seller con link alla pagina di dettaglio relativa</li>
+						<li>contenitore con video di interviste che riportano il pensiero di Asimov su diversi temi</li>
+					</ul>
+					<img src="img/pagIndex.jpg" class="img-fluid mx-auto d-block p-2" alt="Homepage">
+				</p>
+				<h5 class="mt-1" id="wfopere"><em>5.1.2 Pagina opere.html</em></h5>
+				<p>
+					Il corpo della pagina è diviso in tre sezioni:
+					<ul>
+						<li>slider a due cursori nella parte superiore per la selezione del periodo temporale</li>
+						<li>colonna sul lato sinistro con filtri e casella di ricerca testuale sul titolo</li>
+						<li>raccolta delle opere, rappresentate dall'immagine della copertina linkabile</li>
+					</ul>
+					<img src="img/pagOpere.jpg" class="img-fluid mx-auto d-block p-2" alt="Pagina opere">
+				</p>
+				<h5 class="mt-1" id="wfdettaglio"><em>5.1.3 Pagina dettagli.html</em></h5>
+				<p>
+					Il corpo della pagina è diviso in quattro sezioni:
+					<ul>
+						<li>titolo dell'opera nella parte superiore</li>
+						<li>immagine della copertina dell'opera</li>
+						<li>campi descrittivi dell'opera</li>
+						<li>sinossi dell'opera</li>
+					</ul>
+					<img src="img/pagDettagli.jpg" class="img-fluid mx-auto d-block p-2" alt="Pagina dettagli opera">
+				</p>
+				<h5 class="mt-1" id="wfpersonaggi"><em>5.1.4 Pagina personaggi.html</em></h5>
+					<p>
+					Il corpo della pagina è diviso in due sezioni:
+					<ul>
+						<li>colonna sul lato sinistro con filtri e casella di ricerca testuale sul nome</li>
+						<li>raccolta dei personaggi con immagine, attributi e descrizione</li>
+					</ul>
+					<img src="img/pagPersonaggi.jpg" class="img-fluid mx-auto d-block p-2" alt="Pagina personaggi">
+				</p>
+				<h5 class="mt-1" id="wfciclo"><em>5.1.5 Pagina cicloXX.html</em></h5>
+				<p>
+					La stringa XX può assumere i valori Fondazione, Impero, Robot.
+					Il corpo della pagina è diviso in due sezioni:
+					<ul>
+						<li>titolo del ciclo con immagine associata</li>
+						<li>descrizione del ciclo con link alle opere associate</li>
+					</ul>
+					Sono presenti due pulsanti di navigazione per visualizzare le opere componenti il ciclo e i personaggi in esso citati; 
+					i pulsanti puntano rispettivamente alla pagina opere e alla pagine personaggi imponendo un filtro in entrata nel campo ciclo.
+					<img src="img/pagCiclo.jpg" class="img-fluid mx-auto d-block p-2" alt="Pagina ciclo">
+				</p>
+				<h5 class="mt-1" id="wfciclo"><em>5.1.6 Pagina other.html</em></h5>
+				<p>
+					Questo formato di pagina è utilizzato per tutte le altre pagine del sito (Bio, Premi, Adattamenti, Extra)
+					Il corpo della pagina è diviso in due sezioni:
+					<ul>
+						<li>titolo del soggetto della pagina con immagine associata</li>
+						<li>descrizione del soggetto con eventuali link, elementi embedded e simili</li>
+					</ul>
+					<img src="img/pagExtra.jpg" class="img-fluid mx-auto d-block p-2" alt="Pagina other">
+				</p>
+
+			<h5 class="mt-1" id="forati"><strong><em>5.2 Formati</em></strong></h5>
 
 
 		</p>
@@ -393,72 +484,6 @@
 				Realizzare una collezione digitale sui primi 150 numeri seriali di Dylan Dog, ai fini di analizzare l'evoluzione del personaggio, delle storie e dei comprimari, in questo arco temporale di circa 13 anni. Sarà permesso il browsing nella collezione sia per temi e soggetti; in aggiunta saranno presenti strumenti di navigazione temporale e geografica così da poter inquadrare al meglio il soggetto. Quando si analizzeranno i singoli item, cioè i fumetti, si visualizzeranno i metadati relativi e sarà permesso sfogliarli. Il progetto guarda agli appassionati di fumetto e di Dylan Dog come utenti ideali pur essendo fruibile anche a novizi e a semplici interessati.
 			</p>
 	</section>
-
-	<!-- Descrizione -->
-	<section class="container-fluid px-3 my-3 mx-auto">
-		<!-- Titolo sopra la sezione -->
-		<h2 class="text-center mb-4"><strong>Ciclo dei Robot</strong></h2>
-		<div class="row mb-3 d-flex align-items-center w-75 row-cicli mx-auto">
-			<div class="col-md-3 text-center">
-				<a href="personaggi.html?filterCiclo=Robot" target="_blank">
-					<button type="button" class="btn btn-outline-info w-50 puls-cicli">Personaggi</button>
-				</a>
-			</div>
-			<div class="col-md-6 text-center">
-				<img src="img/cicloRobot.jpg" class="img-fluid img-cicli mx-auto" alt="Ciclo Robot">
-			</div>
-			<div class="col-md-3 text-center" target="_blank">
-				<a href="opere.html?filterCiclo=Robot" target="_blank">
-					<button type="button" class="btn btn-outline-info w-50 puls-cicli">Opere</button>
-				</a>
-			</div>
-		</div>
-
-		<div class="container-fluid bg-black text-white w-75 p-4 mx-auto">
-			<p>
-				Il Ciclo dei Robot è suddiviso fra i racconti dei robot positronici, 
-				collocati in un futuro prossimo e incentrati sull'invenzione degli automi 
-				e sui tecnici robotici, e i romanzi degli Spaziali, 
-				ambientati in un futuro più remoto e che narrano dei rapporti 
-				fra gli emigrati nelle Colonie Spaziali e i Terrestri, 
-				storia nella quale i robot giocheranno un ruolo chiave.
-				
-				I racconti nascono dall'invenzione del cervello positronico e 
-				l'enunciazione delle tre leggi della robotica, 
-				a cui i robot positronici devono necessariamente sottostare.
-				Sono raccolti in tre volumi:
-				<a href="opere.html?filterCiclo=Robot" class="mytext-link">
-					<ul>
-						<li><em>Io, robot</em> (<em>I, Robot</em> - 1950)
-						<li><em>Il secondo libro dei robot</em> (<em>The rest of the robots</em> - 1964)
-						<li><em>Antologia del bicentenario</em> (<em>The Bicentennial Man and Other Stories, 1976)
-					</ul>
-				</a>
-			</p>
-			<p>
-				I romanzi degli Spaziali sono collocati temporalmente circa duemila anni nel futuro, 
-				quando gli emigrati dalla Terra avranno fondato le prospere Colonie Spaziali, 
-				e narrano dei rapporti fra gli Spaziali e i Terrestri, 
-				e del ruolo che i robot rivestiranno nell'evoluzione dell'umanità.
-				L'intera saga è composta da quattro romanzi
-				<a href="opere.html?filterCiclo=Robot" class="mytext-link">
-					<ul>
-						<li><em>Abissi d'acciaio</em> (<em>The Caves of Steel</em> - 1954)
-						<li><em>Il sole nudo</em> (<em>The Naked Sun</em> - 1957)
-						<li><em>I robot dell'alba</em> (<em>The Robots of Dawn</em> - 1983)
-						<li><em>I robot e l'Impero</em> (<em>Robots and Empire</em> - 1985)
-					</ul>
-				</a>
-				e dal racconto
-				<a href="opere.html?filterCiclo=Robot" class="mytext-link">
-					<ul>
-						<li><em>Immagine speculare</em> (Mirror Image</em> - 1972)
-					</ul>
-				</a>
-			</p>
-		</div>
-	</section>
-	<!-- Descrizione end -->
 	
 	<!-- Footer -->
 	<div class="container-fluid">
