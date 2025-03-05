@@ -19,6 +19,7 @@ function caricaCSVPersonaggi() {
   });
 }
 
+
 // Funzione per leggere i parametri URL
 function getParametro(name) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -51,7 +52,7 @@ function aggiornaCatalogo() {
     );
 
   $("#catalogo").html(carFiltrati.map((l, index) => `
-      <div class="col-md-11 d-flex align-items-center">
+      <div class="col-md-12 d-flex align-items-center" id="personaggio-${l.nome.replace(/\s+/g, "-")}">
         <div class="row w-100 mb-3">
           <div class="col-2 d-flex justify-content-center align-items-center" style="width: 150px; height: 150px;">
             <img src="${l.img}" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">

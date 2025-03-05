@@ -301,6 +301,37 @@ footer h5 {
     display: inline-block;
 }
 
+
+/* Indicatori di pagina catalogo opere */
+.pagination .page-item .page-link {
+    background-color: #000;
+    color: #0dcaf0;
+    border-color: #000;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0dcaf0;
+    color:#000;
+    pointer-events: none;
+    cursor: default;
+}
+
+.pagination .page-item:not(.active) .page-link:hover {
+    background-color: #000;
+    color: #0dcaf0;
+    text-decoration: underline;
+}
+
+.pagination .page-item .page-link:hover {
+    color: #0dcaf0;
+    text-decoration: underline;
+}
+
+.pagination .page-item {
+    margin: 2px;
+}
+
+
 @media (max-width: 768px) {
     #CaroselloTop {
         width: 90% !important;

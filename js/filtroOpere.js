@@ -1,5 +1,8 @@
-
 let libri = [];
+let libriFiltrati = [];
+let libriPerPagina = 12;
+let paginaCorrente = 1;
+
 // Cartella immagini
 const imgBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/img/";
 // Cartella sinossi
@@ -58,7 +61,7 @@ function getParametro(name) {
     return urlParams.get(name);
 }
 
- // Aggiornamento e scrittura libri filtrati
+// Aggiornamento e scrittura libri filtrati
 function aggiornaCatalogoLibri() {
   const tipo = $("#filterTipo").val();
   const ciclo = $("#filterCiclo").val();
@@ -67,28 +70,66 @@ function aggiornaCatalogoLibri() {
   const genereFiltro = $("#filterGenere").val().trim(); 
   const [annoInizio, annoFine] = slider.noUiSlider.get().map(Number);
   
-  let libriFiltrati = libri.filter(l => 
+  // Filtriamo i libri
+  libriFiltrati = libri.filter(l => 
     (titoloFiltro === "" || l.titolo.toLowerCase().includes(titoloFiltro)) &&
     (tipo === "" || l.tipo === tipo) && 
     (ciclo === "" || l.ciclo === ciclo) &&
     (genereFiltro === "" || l.genere.trim() === genereFiltro) &&
     (l.anno >= annoInizio && l.anno <= annoFine)
-    );
-  
+  );
+
+  // Ordiniamo i libri
   libriFiltrati.sort((a, b) => a[`ordine${ordine}`] - b[`ordine${ordine}`]);
-  
-  $("#catalogo").html(libriFiltrati.map(l => `
-    <div class="col-md-3 mb-3">
+
+  // Mostriamo la prima pagina
+  paginaCorrente = 1;
+  mostraPagina(paginaCorrente);
+}
+
+function mostraPagina(pagina) {
+  let start = (pagina - 1) * libriPerPagina;
+  let end = start + libriPerPagina;
+  let libriDaMostrare = libriFiltrati.slice(start, end);
+
+  $("#catalogo").html(libriDaMostrare.map((l, index) => `
+    <div id="oggetto-${index}" class="col-md-3 mb-3 card-container">
       <div class="card">
         <a href="dettagli.html?titolo=${encodeURIComponent(l.titolo)}&tipo=${encodeURIComponent(l.tipo)}&ciclo=${encodeURIComponent(l.ciclo)}&ordine1=${l.ordine1}&ordine2=${l.ordine2}&isbn=${l.isbn}&img=${encodeURIComponent(l.img)}&link=${encodeURIComponent(l.link)}&anno=${encodeURIComponent(l.anno)}&genere=${encodeURIComponent(l.genere)}" target="_blank">
-          <img src="${l.img}" class="card-img-top img-fluid" style="height: 200px; width: 100%; object-fit: contain;" data-dc-title="${l.titolo}">
+          <img src="${l.img}" class="card-img-top img-fluid" style="height: 200px; width: 100%; object-fit: contain;">
         </a>
         <div class="card-body text-center">
-          <h6 class="card-title">${l.titolo}</h6>
+          <h6 class="DC.Title">${l.titolo}</h6>
+          <h6 class="DC.Date">${l.anno}</h6>
+        </div>
         </div>
       </div>
     </div>
   `).join(""));
+
+  aggiornaPaginazione();
+}
+
+function aggiornaPaginazione() {
+  let numPagine = Math.ceil(libriFiltrati.length / libriPerPagina);
+  let paginazioneHTML = "";
+
+  for (let i = 1; i <= numPagine; i++) {
+    paginazioneHTML += `<li class="page-item ${i === paginaCorrente ? 'active' : ''}">
+                          <a class="page-link" href="#" onclick="cambiaPagina(${i})">${i}</a>
+                        </li>`;
+  }
+
+  $("#paginazione").html(`<nav>
+                            <ul class="pagination justify-content-center">
+                              ${paginazioneHTML}
+                            </ul>
+                          </nav>`);
+}
+
+function cambiaPagina(pagina) {
+  paginaCorrente = pagina;
+  mostraPagina(paginaCorrente);
 }
 
 $(document).ready(function() {
