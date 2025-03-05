@@ -22,20 +22,22 @@
 		<link rel="manifest" href="favicon/site.webmanifest">
 
 		<!-- Titolo -->
-		<title> Isaac Asimov - Dettaglio </title>
+		<title> Isaac Asimov - About </title>
 
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 		<!-- Dublin Core -->
 		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
-		<META name="DC.Title" content=""/>
-		<META name="DC.Creator" content="Isaac Asimov"/>
-		<META name="DC.Subject" content=""/>
-		<META name="DC.Description" content=""/>
-		<META name="DC.Date" content=""/>
-		<META name="DC.Type" content=""/>
-		<META name="DC.Format" content="Documento cartaceo"/>
+		<META name="DC.Title" content="Isaac Asimov"/>
+		<META name="DC.Creator" content="Roberto Mazzoni"/>
+		<META name="DC.Subject" content="Opere di Isaac Asimov"/>
+		<META name="DC.Description" content="Sito dedicato alle opere di Isaac Asimov"/>
+		<META name="DC.Publisher" content="github.com"/>
+		<META name="DC.Date" content="2025-03-19"/>
+		<META name="DC.Type" content="Produzione letteraria"/>
+		<META name="DC.Format" content="Sito web HTML"/>
+		<META name="DC.Source" content="Wikipedia"/>
 		<META name="DC.Language" content="it"/>
 	</head>
         
@@ -49,7 +51,7 @@
 					</div>
 					<div class="col-8">
 						<h1 class="text-center mb-4"><strong>Isaac Asimov</strong></h2>
-						<h2 class="text-center mb-4">Le opere</h3>
+						<h2 class="text-center mb-4">Chi siamo</h3>
 					</div>
 				</div>
 			</section>
@@ -58,7 +60,7 @@
 
 		<main>
 			<!-- Menu navigazione -->
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="NavBar">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="NavBar">
 				<div class="container-fluid">
 					<!-- Logo / Home -->
 					<a class="navbar-brand" href="about.html">
@@ -86,8 +88,8 @@
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="cicloRobot.html">Ciclo dei Robot</a></li>
-									<li><a class="dropdown-item" href="cicloFondazione.html">Ciclo della Fondazione</a></li>
+									<li><a class="dropdown-item" href="cicloRobot">Ciclo dei Robot</a></li>
+									<li><a class="dropdown-item" href="cicloFondazione">Ciclo della Fondazione</a></li>
 									<li><a class="dropdown-item" href="cicloImpero.html">Ciclo dell'Impero</a></li>
 								</ul>
 							</li>
@@ -113,10 +115,6 @@
 									<li><a class="dropdown-item" href="#">Associazioni</a></li>
 								</ul>
 							</li>
-
-								<!-- <li class="nav-item">
-										<a class="nav-link disabled" aria-disabled="true">Disabled</a>
-								</li> -->
 						</ul>
 						<form role="search">
 							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
@@ -131,8 +129,7 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
 						<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-						<li class="breadcrumb-item"><a href="opere.html">Opere</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Dettaglio</li>
+						<li class="breadcrumb-item active" aria-current="page">About</li>
 					</ol>
 				</nav>
 			</div>
@@ -140,92 +137,11 @@
 		</main>
 	</body>
 
+	<section class="container-fluid px-3 my-3 mx-auto">
+		<!-- Titolo sopra la sezione -->
+		<h2 class="text-center mb-4"><strong>About</strong></h2>
 
-    <script>
-			function getQueryParams() {
-				const params = new URLSearchParams(window.location.search);
-				return {
-					titolo: params.get("titolo"),
-					tipo: params.get("tipo"),
-					ciclo: params.get("ciclo"),
-					ordine1: params.get("ordine1"),
-					ordine2: params.get("ordine2"),
-					isbn: params.get("isbn"),
-					img: params.get("img"),
-					link: params.get("link"),
-					anno: params.get("anno"),
-					genere: params.get("genere")
-				};
-			}
-
-			function formatLinks(text) {
-      			return text.replace(/<link\s+\"(.*?)\">(.*?)<\/link>/g, '<a href="$1" target="_blank" class="mytext-link">$2</a>');
-    		}
-
-			function mostraDettagli() {
-				const libro = getQueryParams();
-				const dataCompleta = libro.anno ? `${libro.anno}-01-01` : "";
-				const cicloLink = document.getElementById("cicloLink");
-
-				document.getElementById("titolo").innerText = libro.titolo;
-				document.getElementById("tipo").innerText = libro.tipo;
-				document.getElementById("ciclo").innerText = libro.ciclo;
-				document.getElementById("ordine1").innerText = libro.ordine1;
-				document.getElementById("ordine2").innerText = libro.ordine2 > 1000 ? "-" : libro.ordine2;
-				document.getElementById("isbn").innerText = libro.isbn;
-				document.getElementById("copertina").src = libro.img;
-				document.getElementById("anno").innerText = libro.anno;
-				document.getElementById("genere").innerText = libro.genere;
-
-				document.querySelector('meta[name="DC.Title"]').setAttribute("content", libro.titolo);
-				document.querySelector('meta[name="DC.Subject"]').setAttribute("content", libro.genere);
-				document.querySelector('meta[name="DC.Description"]').setAttribute("content", libro.ciclo);
-				document.querySelector('meta[name="DC.Date"]').setAttribute("content", dataCompleta);
-				document.querySelector('meta[name="DC.Type"]').setAttribute("content", libro.tipo);
-
-				if (libro.ciclo && libro.ciclo.toLowerCase() !== "nessuno") {
-					url = "ciclo" + encodeURIComponent(libro.ciclo) + ".html";
-					cicloLink.href = url;
-					cicloLink.style.display = "inline";
-				} else {
-					cicloLink.style.display = "none";
-				}				
-
-				// Carica la sinossi
-				fetch(libro.link)
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById("sinossi").innerHTML = formatLinks(data);
-						document.querySelector('meta[name="DC.Description"]').setAttribute("content", data);
-					})
-					.catch(error => {
-						document.getElementById("sinossi").innerText = "Sinossi non disponibile.";
-					});
-			}
-    </script>
-
-	<!-- <body onload="mostraDettagli()" class="container mt-4"> -->
-	<body onload="mostraDettagli()" class="container-fluid">
-		<h1 id="titolo" class="text-center mb-4"></h1>
-		<div class="row align-items-start">
-			<div class="col-md-4 text-center">
-				<img id="copertina" class="img-fluid" style="max-height: 400px;">
-			</div>
-			<div class="col-md-8">
-				<p><span style="display: inline-block; width: 200px;">Tipo</span> <strong id="tipo"></strong></p>
-				<p><span style="display: inline-block; width: 200px;">Genere</span> <strong id="genere"></strong></p>
-				<p>
-					<span style="display: inline-block; width: 200px;">Ciclo</span> 
-					<a id="cicloLink" href="#" target="_blank" class="mytext-link"><strong id="ciclo"></strong></a>
-				</p>
-				<p><span style="display: inline-block; width: 200px;">Anno di pubblicazione</span> <strong id="anno"></strong></p>
-				<p><span style="display: inline-block; width: 200px;">ISBN</span> <strong id="isbn"></strong></p>
-				<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Cronologico</span> <strong id="ordine1"></strong></p>
-				<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Logico</span> <strong id="ordine2"></strong></p>
-				<p><span>Sinossi</strong>
-				<p id="sinossi">Caricamento sinossi...</p>			</div>
-		</div>
-	</body>
+	</section>
 	
 	<!-- Footer -->
 	<div class="container-fluid">
@@ -239,7 +155,7 @@
 			<div class="col mb-3">
 				<h5>Chi siamo</h5>
 				<ul class="nav flex-column">
-					<li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
 					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Indirizzo</a></li>
 					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contattaci</a></li>
 				</ul>
@@ -257,7 +173,7 @@
 			<div class="col mb-3">
 				<h5>Link utili</h5>
 				<ul class="nav flex-column">
-					<li class="nav-item mb-2"><a href="wpp.html" class="nav-link p-0 text-body-secondary">Web Project Plan</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Web Project Plan</a></li>
 					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">UniBO</a></li>
 					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bootstrap</a></li>
 				</ul>
