@@ -54,8 +54,12 @@ function aggiornaCatalogo() {
   $("#catalogo").html(carFiltrati.map((l, index) => `
       <div class="col-md-12 d-flex align-items-center" id="personaggio-${l.nome.replace(/\s+/g, "-")}">
         <div class="row w-100 mb-3">
-          <div class="col-2 d-flex justify-content-center align-items-center" style="width: 150px; height: 150px;">
-            <img src="${l.img}" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+          <div class="col-2 d-flex justify-content-center align-items-center position-relative" style="width: 150px; height: 150px;">
+            <img src="${l.img}" class="img-fluid img-thumbnail" style="object-fit: cover; width: 100%; height: 100%; cursor: pointer;" 
+                data-bs-toggle="modal" data-bs-target="#modalImg-${index}">
+            <div class="overlay-img d-flex align-items-center justify-content-center">
+              Clicca per ingrandire
+            </div>
           </div>
           <div class="col-10">
             <p>
@@ -69,6 +73,22 @@ function aggiornaCatalogo() {
           </div>
         </div>
       </div>
+
+      <!-- Modale per l'immagine -->
+      <div class="modal fade" id="modalImg-${index}" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">${l.nome}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="${l.img}" class="img-fluid" style="max-width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
   `).join(""));
 }
 
