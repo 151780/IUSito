@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/asimov.css"/>          <!-- personale -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>		<!-- Bootstrap -->
+
+		<!-- JS -->
+		<script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
+		<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons&source=platform" async="async"></script>	<!-- ShareThis -->
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+
+		<!-- Titolo -->
+		<title> Isaac Asimov - Impero Galattico </title>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+		<!-- Dublin Core -->
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+		<META name="DC.Title" content="Isaac Asimov"/>
+		<META name="DC.Creator" content="Roberto Mazzoni"/>
+		<META name="DC.Subject" content="Opere di Isaac Asimov"/>
+		<META name="DC.Description" content="Sito dedicato alle opere di Isaac Asimov"/>
+		<META name="DC.Publisher" content="github.com"/>
+		<META name="DC.Date" content="2025-03-19"/>
+		<META name="DC.Type" content="Produzione letteraria"/>
+		<META name="DC.Format" content="Sito web HTML"/>
+		<META name="DC.Source" content="Wikipedia"/>
+		<META name="DC.Language" content="it"/>
+	</head>
+        
+	<body>
+		<!-- Header -->
+		<header>
+			<section class="container-fluid">
+				<div class="row">
+					<div class="col-4 p-0">
+						<a href="index.html"><img src="img/HeaderImg.jpg" class="img-fluid w-100" alt="Isaac Asimov"></a>
+					</div>
+					<div class="col-8">
+						<h1 class="text-center mb-4"><strong>Isaac Asimov</strong></h2>
+						<h2 class="text-center mb-4">Impero Galattico</h3>
+					</div>
+				</div>
+			</section>
+		</header>
+		<!-- Header end -->
+
+		<main>
+			<!-- Menu navigazione -->
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="NavBar">
+				<div class="container-fluid">
+					<!-- Logo / Home -->
+					<a class="navbar-brand" href="about.html">
+						<img src="img/IA.jpg" alt="IA" height="40">
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLogo" aria-controls="navbarLogo" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- Voci menu -->
+					<div class="collapse navbar-collapse" id="navbarLogo">
+						<ul class="navbar-nav me-auto mb-2 mb-md-0">
+							<!-- Home -->
+							<li class="nav-item">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<!-- Bio -->
+							<li class="nav-item">
+								<a class="nav-link" href="#">Bio</a>
+							</li>
+							<!-- Opere -->
+							<li class="nav-item">
+								<a class="nav-link" href="opere.html">Opere</a>
+							</li>
+							<!-- Cicli con dropdown su ciclo -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="cicloRobot.html">Ciclo dei Robot</a></li>
+									<li><a class="dropdown-item" href="cicloFondazione.html">Ciclo della Fondazione</a></li>
+									<li><a class="dropdown-item" href="cicloImpero.html">Ciclo dell'Impero</a></li>
+								</ul>
+							</li>
+							<!-- Personaggi -->
+							<li class="nav-item">
+								<a class="nav-link" href="personaggi.html">Personaggi</a>
+							</li>
+							<!-- Premi -->
+							<li class="nav-item">
+								<a class="nav-link" href="#">Premi</a>
+							</li>
+							<!-- Adattamenti -->
+							<li class="nav-item">
+								<a class="nav-link" href="#">Adattamenti</a>
+							</li>
+							<!-- Extra con dropdown -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Extra</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Leggi della robotica</a></li>
+									<li><a class="dropdown-item" href="#">Psicostoria</a></li>
+									<li><a class="dropdown-item" href="#">Impero Galattico</a></li>
+									<li><a class="dropdown-item" href="#">Collaborazioni</a></li>
+									<li><a class="dropdown-item" href="#">Associazioni</a></li>
+								</ul>
+							</li>
+						</ul>
+						<form role="search">
+							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+						</form>
+					</div>
+				</div>
+			</nav>
+			<!-- Menu navigazione end -->
+
+			<!-- Breadcrumbs -->
+			<div class="container-fluid px-3 my-3 w-90 mx-auto">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+						<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Impero Galattico</li>
+					</ol>
+				</nav>
+			</div>
+			<!-- Breadcrumbs end -->
+
+			<section class="container-fluid w-100 px-3 my-3 mx-auto">
+				<!-- Titolo sopra la sezione -->
+				<h2 class="text-center mb-4"><strong>L'Impero Galattico</strong></h2>
+				<h5 class="text-center mb-4 w-75 mx-auto">
+					Naviga sulla mappa stellare e scopri i mondi asimoviani            
+				</h5>
+
+				<div class="row mx-auto">
+	
+					<div class="col-md-5 px-3 my-3 bg-white mx-auto d-flex">
+						<p class="descr-text">
+							Nei romanzi del <a href="cicloRobot.html" class="mytext-link"><strong>Ciclo dei Robot</strong></a>, del 
+							<a href="cicloImpero.html" class="mytext-link"><strong>Ciclo dell'Impero</strong></a> e del 
+							<a href="cicloFondazione.html" class="mytext-link"><strong>Ciclo della Fondazione</strong></a>, 
+							l'<strong>Impero Galattico</strong> è un vasto impero che copre l'<strong>intera via Lattea</strong>, cui appartengono quasi tutti i pianeti 
+							colonizzati dall'uomo. La sua descrizione è chiaramente ispirata alla storia dell'Impero romano. <br /> 
+							A differenza della maggior parte degli imperi galattici descritti nella fantascienza più recente, l'Impero Galattico 
+							asimoviano non è caratterizzato negativamente ed è un'<strong>istituzione generalmente benigna</strong>.<br />
+							Al momento del suo declino (nel 12069 E.G.) esso comprende oltre <strong>venticinque milioni di mondi abitati</strong>, 
+							tutti colonizzati da abitanti della Terra (e non dagli spaziali), sebbene la posizione e il 
+							nome del pianeta d'origine dell'umanità siano stati dimenticati, e sono un problema di storia, 
+							il <strong>Problema delle Origini</strong>.<br />
+							La capitale dell'Impero Galattico è <strong>Trantor</strong>, un pianeta interamente ricoperto da un'unica enorme megalopoli 
+							(una tipica <strong>Ecumenopoli</strong>), situato in prossimità del centro galattico. 
+							Vi si trovano la residenza dell'Imperatore e gli organi di controllo amministrativo dell'Impero. 
+							La maggior parte della popolazione della Galassia (circa i tre quarti) risiede nella parte centrale 
+							della Spirale.
+						</p>
+					</div>
+					
+					<div class="col-md-6 px-3 my-3 bg-black mx-auto d-flex justify-content-center">
+						<div class="position-relative">
+							<img src="img/MappaImpero.png" usemap="#mappa-impero" alt="Mappa Impero" id="mappa">
+							<div id="tooltip">Clicca per i dettagli</div>
+						</div>
+
+						<map name="mappa-impero">
+							<area shape="rect" coords="215,265,285,235" alt="Trantor" onmouseover="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseout="hideTooltip()" onclick="openPopup('Trantor', 'img/Trantor.jpg', 
+								'Trantor è il pianeta-città capitale del Primo Impero Galattico; localizzato nelle regioni centrali della Via Lattea è uno dei pianeti abitabili più vicini al Nucleo Galattico.'
+								)">
+							<area shape="rect" coords="410,310,500,280" alt="Terminus" onmouseover="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseout="hideTooltip()" onclick="openPopup('Terminus', 'img/Terminus.jpg', 
+								'Terminus è un pianeta situato nel settore di Anacreon, a diecimila parsec da Trantor; venne colonizzato in funzione del piano Seldon. Sul pianeta non sono presenti veri e propri continenti, ma una grande quantità di isole.'
+								)">
+							<area shape="rect" coords="120,145,180,120" alt="Helicon" onmouseover="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseout="hideTooltip()" onclick="openPopup('Helicon', 'img/Helicon.jpg', 
+								'Helicon è il pianeta nativo di Hari Seldon. Situato alla fine della Spirale Galattica, nella regione di Arturo, è un pianeta periferico, piccolo e povero di risorse, complessivamente poco importante nella storia galattica; prima della nascita dell\'Impero Galattico era terra di conquista per altri regni.'
+								)">
+							<area shape="rect" coords="330,135,415,110" alt="Anacreon" onmouseover="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseout="hideTooltip()" onclick="openPopup('Anacreon', 'img/Anacreon.jpg', 
+								'Anacreon durante l\'era Galattica è uno dei più importanti e ricchi pianeti della periferia della Galassia; si trova a circa 10.000 parsec dalla capitale imperiale Trantor, ed è la capitale della provincia e della prefettura di Anacreon.'
+								)">
+							<area shape="rect" coords="30,300,80,280" alt="Aurora" onmouseover="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseout="hideTooltip()" onclick="openPopup('Aurora', 'img/Aurora.jpg', 
+								'Aurora è stato il primo pianeta ad essere colonizzato dagli esseri umani dopo la Terra nel 2165 nonché primo degli Spaziali. Chiamato originariamente Nuova Terra, Aurora orbita intorno alla stella Tau Ceti, a circa 3,7 parsec dalla Terra. Fin da subito, Aurora è stato il più potente dei mondi Spaziali.'
+								)">
+							<area shape="rect" coords="280,450,335,425" alt="Gaia" onmouseover="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseout="hideTooltip()" onclick="openPopup('Gaia', 'img/Gaia.jpg', 
+								'Gaia è un pianeta molto accogliente dotato di un ecosistema in perfetto equilibrio che deriva dal particolare processo evolutivo, una vera e propria utopia che ha portato alla nascita su Gaia di quella che può essere definita come una democrazia totale. Su Gaia ogni piccolo componente ha una propria consapevolezza che lo collega continuamente agli altri tramite contatto telepatico.'
+								)">
+							<area shape="rect" coords="20,375,75,350" alt="Terra" onmouseover="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseout="hideTooltip()" onclick="openPopup('Terra', 'img/Terra.jpg', 
+								'La Terra rappresenta uno degli elementi in comune tra i cicli della Fondazione, dell\'Impero e dei Robot scritti da Isaac Asimov. È una delle ambientazioni oppure è nominata in quasi tutti i romanzi che compongono questi cicli; non se ne parla solamente ne Il crollo della Galassia centrale e in L\'altra faccia della spirale.'
+								)">
+						</map>
+
+						<div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="popupModalLabel">Titolo del Popup</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<img id="popupImage" src="" alt="Immagine" class="img-fluid mb-3">
+									<p class="descr-text" id="popupText">Testo del popup.</p>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<script>
+				function openPopup(title, imgSrc, text) {
+					document.getElementById('popupModalLabel').innerText = title;
+					document.getElementById('popupImage').src = imgSrc;
+					document.getElementById('popupText').innerText = text;
+					var modal = new bootstrap.Modal(document.getElementById('popupModal'));
+					modal.show();
+				}
+			</script>
+
+			<script>
+function showTooltip(event) {
+    var tooltip = document.getElementById("tooltip");
+    tooltip.style.display = "block";
+    moveTooltip(event);
+}
+
+function moveTooltip(event) {
+    var tooltip = document.getElementById("tooltip");
+    var image = document.getElementById("mappa");
+
+    // Otteniamo la posizione del mouse rispetto alla pagina
+    var mouseX = event.pageX;
+    var mouseY = event.pageY;
+
+    // Calcoliamo la posizione dell'immagine relativamente alla pagina
+    var imageRect = image.getBoundingClientRect();
+
+    // Aggiungiamo gli offset relativi all'immagine centrata
+    var offsetX = 15;
+    var offsetY = 15;
+
+    // Consideriamo lo scroll verticale della pagina
+    var scrollY = window.scrollY || document.documentElement.scrollTop;
+
+    // Calcoliamo la posizione del tooltip in base all'immagine, al mouse e allo scroll
+    var tooltipX = mouseX - imageRect.left + offsetX;
+    var tooltipY = mouseY - imageRect.top + offsetY - scrollY;
+
+    // Posizioniamo il tooltip
+    tooltip.style.left = tooltipX + "px";
+    tooltip.style.top = tooltipY + "px";
+}
+
+function hideTooltip() {
+    document.getElementById("tooltip").style.display = "none";
+}
+
+			</script>
+	
+	
+	
+		</main>
+	
+		<!-- Footer -->
+		<div class="container-fluid">
+			<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-black">
+				<div class="col mb-3">
+					<a href="#">
+						<img src="img/IA.jpg" alt="Logo" height="40">
+					</a>
+				</div>
+
+				<div class="col mb-3">
+					<h5>Chi siamo</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Indirizzo</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contattaci</a></li>
+					</ul>
+				</div>
+			
+				<div class="col mb-3">
+					<h5>Disclaimer</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Informativa</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Crediti</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+					</ul>
+				</div>
+			
+				<div class="col mb-3">
+					<h5>Link utili</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Web Project Plan</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">UniBO</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bootstrap</a></li>
+					</ul>
+				</div>
+
+				<div class="col mb-3">
+					<h5>Social</h5>
+					<div class="sharethis-inline-follow-buttons text-start"></div>
+				</div>
+			</footer>
+		</div>
+		<!-- Footer end -->
+	</body>	  
+</html>

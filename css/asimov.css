@@ -204,15 +204,25 @@ span.carousel-control-prev-icon {
 .row-cicli {
     height: 150px;
     display: flex;
-    /* align-items: center; */
 }
 
+
 .puls-cicli {
-    font-weight: bold;
-    color: black !important;
-    border-width: 4px !important;
+    font-weight: bold !important;
+    background-color: black !important;
+    border: 2px solid black;
     border-radius: 10px;
+    color: #0dcaf0;
+    transition: all 0.3s ease;
 }
+  
+.puls-cicli:hover {
+    text-decoration: underline;
+    background-color: black;
+    border-color: black;
+    color: #0dcaf0 !important;
+}
+  
 
 /* Immagini personaggi */
 .person-img {
@@ -273,7 +283,7 @@ span.carousel-control-prev-icon {
     text-decoration: underline;
 }
 
-
+/* Footer */
 footer {
     background-color: #000 !important;
 }
@@ -346,10 +356,10 @@ footer h5 {
 }
 
 #btnTop:hover {
-background-color: #0dccf2cc;
+    background-color: #0dccf2cc;
 }
   
-/* overlay immagine personaggio */
+/* Overlay immagine personaggio */
 .overlay-img {
     position: absolute;
     bottom: 10px;
@@ -369,13 +379,56 @@ background-color: #0dccf2cc;
 }
 
 .position-relative:hover .overlay-img {
-opacity: 1;
+    opacity: 1;
 }
 
 /* Sezione filtri */
 .bg-filter {
     background-color: #0dcaf0 !important;
 }
+
+/* Mappa impero */
+#tooltip {
+    position: absolute;
+    background: #00000088;
+    color: #0dcaf0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    display: none;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* Modali pianeti e personaggi */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    padding: 20px;
+}
+  
+
+#popupImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+  
+
+#popupModalLabel {
+    font-weight: bold;
+    color: black;
+}
+  
+#popupText {
+    color: white;
+}
+  
+  
 
 /* Adattamento per schermi mobili del carosello delle leggi */
 @media (max-width: 768px) {
