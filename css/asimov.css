@@ -387,7 +387,7 @@ footer h5 {
     background-color: #0dcaf0 !important;
 }
 
-/* Mappa impero */
+/* Mappa impero inserita in container con scroll orizzontale per garantire visualizzazione sui mobili*/
 #tooltip {
     position: absolute;
     background: #00000088;
@@ -399,6 +399,23 @@ footer h5 {
     display: none;
     z-index: 1000;
     pointer-events: none;
+}
+
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+#map-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+#mappa {
+    display: block;
 }
 
 /* Modali pianeti e personaggi */
@@ -438,20 +455,4 @@ footer h5 {
 }
 
 
-/* Contenitore scrollabile orizzontalmente */
-.scroll-container {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-}
 
-/* Mantiene l'immagine della dimensione originale */
-#map-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* Impedisce il ridimensionamento automatico */
-#mappa {
-    display: block;
-}
