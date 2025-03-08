@@ -167,12 +167,12 @@
 					</div>
 					
 					<div class="col-md-6 px-3 my-3 bg-black mx-auto d-flex justify-content-center container-fluid">
-						<!-- <div class="container-fluid"> -->
+						<div class="scroll-container">
 						<div class="position-relative">
 							<img src="img/MappaImpero.png" usemap="#mappa-impero" alt="Mappa Impero" id="mappa">
 							<div id="tooltip">Clicca per i dettagli</div>
 						</div>
-						<!-- </div> -->
+						</div>
 
 						<map name="mappa-impero">
 							<area shape="rect" coords="215,265,285,235" alt="Trantor" onmouseover="showTooltip(event)" onmousemove="moveTooltip(event)" onmouseout="hideTooltip()" onclick="openPopup('Trantor', 'img/Trantor.jpg', 
@@ -227,49 +227,44 @@
 			</script>
 
 			<script>
-function showTooltip(event) {
-    var tooltip = document.getElementById("tooltip");
-    tooltip.style.display = "block";
-    moveTooltip(event);
-}
+				function showTooltip(event) {
+					var tooltip = document.getElementById("tooltip");
+					tooltip.style.display = "block";
+					moveTooltip(event);
+				}
 
-function moveTooltip(event) {
-    var tooltip = document.getElementById("tooltip");
-    var image = document.getElementById("mappa");
+				function moveTooltip(event) {
+					var tooltip = document.getElementById("tooltip");
+					var image = document.getElementById("mappa");
 
-    // Otteniamo la posizione del mouse rispetto alla pagina
-    var mouseX = event.pageX;
-    var mouseY = event.pageY;
+					// Otteniamo la posizione del mouse rispetto alla pagina
+					var mouseX = event.pageX;
+					var mouseY = event.pageY;
 
-    // Calcoliamo la posizione dell'immagine relativamente alla pagina
-    var imageRect = image.getBoundingClientRect();
+					// Calcoliamo la posizione dell'immagine relativamente alla pagina
+					var imageRect = image.getBoundingClientRect();
 
-    // Aggiungiamo gli offset relativi all'immagine centrata
-    var offsetX = 15;
-    var offsetY = 15;
+					// Aggiungiamo gli offset relativi all'immagine centrata
+					var offsetX = 15;
+					var offsetY = 15;
 
-    // Consideriamo lo scroll verticale della pagina
-    var scrollY = window.scrollY || document.documentElement.scrollTop;
+					// Consideriamo lo scroll verticale della pagina
+					var scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    // Calcoliamo la posizione del tooltip in base all'immagine, al mouse e allo scroll
-    var tooltipX = mouseX - imageRect.left + offsetX;
-    var tooltipY = mouseY - imageRect.top + offsetY - scrollY;
+					// Calcoliamo la posizione del tooltip in base all'immagine, al mouse e allo scroll
+					var tooltipX = mouseX - imageRect.left + offsetX;
+					var tooltipY = mouseY - imageRect.top + offsetY - scrollY;
 
-    // Posizioniamo il tooltip
-    tooltip.style.left = tooltipX + "px";
-    tooltip.style.top = tooltipY + "px";
-}
+					// Posizioniamo il tooltip
+					tooltip.style.left = tooltipX + "px";
+					tooltip.style.top = tooltipY + "px";
+				}
 
-function hideTooltip() {
-    document.getElementById("tooltip").style.display = "none";
-}
-
+				function hideTooltip() {
+					document.getElementById("tooltip").style.display = "none";
+				}
 			</script>
-	
-	
-	
 		</main>
-	
 		<!-- Footer -->
 		<div class="container-fluid">
 			<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-black">
