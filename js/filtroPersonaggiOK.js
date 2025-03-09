@@ -52,7 +52,7 @@ function aggiornaCatalogo() {
     );
 
   $("#catalogo").html(carFiltrati.map((l, index) => `
-      <div class="col-md-12 d-flex align-items-center" id="personaggio-${l.nome.replace(/\s+/g, "-")}"> 
+      <div class="col-md-12 d-flex align-items-center" id="personaggio-${l.nome.replace(/\s+/g, "-")}">
         <div class="row w-100 mb-3">
           <div class="col-2 d-flex justify-content-center align-items-center position-relative" style="width: 150px; height: 150px;">
             <img src="${l.img}" class="img-fluid img-thumbnail" style="object-fit: cover; width: 100%; height: 100%; cursor: pointer;" 
@@ -94,7 +94,6 @@ function aggiornaCatalogo() {
 
 $(document).ready(function() {
   caricaCSVPersonaggi();
-  creaAccordionPersonaggi();
 
   // Acquisisce valori dei filtri Titolo e ciclo
   const titoloFiltro = getParametro("filterName");
@@ -109,88 +108,7 @@ $(document).ready(function() {
       $("#filterCiclo").val(cicloFiltro);
       // aggiornaCatalogo();  // Chiama la funzione che aggiorna i libri filtrati
   }
+
+
   $("#filterCiclo, #filterName, #filterGenere").on("change", aggiornaCatalogo);
 });
-
-// Funzione per creare l'accordion con le iniziali
-function creaAccordionPersonaggi() {
-  const accordionContainer = document.getElementById("accordionPersonaggi");
-
-  // Ordina i personaggi in ordine alfabetico per nome
-  const personaggiOrdinati = caratteri.sort((a, b) => a.nome.localeCompare(b.nome));
-
-  // Crea un oggetto per raccogliere i personaggi per iniziale
-  const personaggiPerIniziale = {};
-
-  personaggiOrdinati.forEach(personaggio => {
-    const iniziale = personaggio.nome.charAt(0).toUpperCase();
-    if (!personaggiPerIniziale[iniziale]) {
-      personaggiPerIniziale[iniziale] = [];
-    }
-    personaggiPerIniziale[iniziale].push(personaggio);
-  });
-
-  // Costruisci l'accordion con le iniziali
-  Object.keys(personaggiPerIniziale).forEach((iniziale, index) => {
-    const id = `collapse${iniziale}`;
-    const headerId = `heading${iniziale}`;
-
-    const accordionItem = document.createElement("div");
-    accordionItem.classList.add("accordion-item");
-
-    // Creazione dell'intestazione dell'accordion
-    const accordionHeader = document.createElement("h2");
-    accordionHeader.classList.add("accordion-header");
-    accordionHeader.id = headerId;
-
-    const accordionButton = document.createElement("button");
-    accordionButton.classList.add("accordion-button");
-    accordionButton.setAttribute("type", "button");
-    accordionButton.setAttribute("data-bs-toggle", "collapse");
-    accordionButton.setAttribute("data-bs-target", `#${id}`);
-    accordionButton.setAttribute("aria-expanded", "true");
-    accordionButton.setAttribute("aria-controls", id);
-    accordionButton.textContent = iniziale;
-
-    accordionHeader.appendChild(accordionButton);
-
-    const accordionCollapse = document.createElement("div");
-    accordionCollapse.id = id;
-    accordionCollapse.classList.add("accordion-collapse", "collapse");
-    if (index === 0) accordionCollapse.classList.add("show");
-
-    const accordionBody = document.createElement("div");
-    accordionBody.classList.add("accordion-body");
-
-    // Aggiungi i nomi dei personaggi
-    personaggiPerIniziale[iniziale].forEach(personaggio => {
-      const personaggioLink = document.createElement("a");
-      personaggioLink.href = `#personaggio-${personaggio.nome.replace(/\s+/g, "-")}`;
-      personaggioLink.classList.add("text-decoration-none");
-      personaggioLink.textContent = personaggio.nome;
-      
-      // Aggiungi un evento per scrollare alla posizione del personaggio
-      personaggioLink.addEventListener("click", function(event) {
-        event.preventDefault();
-        const targetId = personaggioLink.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          const navbarHeight = document.querySelector(".navbar") ? document.querySelector(".navbar").offsetHeight : 0;
-          const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight - 10;
-          window.scrollTo({ top: elementPosition, behavior: "smooth" });
-        }
-      });
-
-      accordionBody.appendChild(personaggioLink);
-      accordionBody.appendChild(document.createElement("br"));
-    });
-
-    accordionCollapse.appendChild(accordionBody);
-    accordionItem.appendChild(accordionHeader);
-    accordionItem.appendChild(accordionCollapse);
-    accordionContainer.appendChild(accordionItem);
-  });
-}
-
-
-

@@ -112,3 +112,71 @@ $(document).ready(function() {
 
   $("#filterCiclo, #filterName, #filterGenere").on("change", aggiornaCatalogo);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("https://raw.githubusercontent.com/151780/IUSito/main/data/personaggi.csv")
+      .then(response => response.text())
+      .then(data => {
+          const righe = data.split("\n").slice(1);
+          const personaggi = righe.map(riga => riga.split(",")[0]).filter(nome => nome);
+
+          const iniziali = [
+              ...new Set(
+                  personaggi.flatMap(nome => {
+                      const nomi = nome.split(" ");
+                      return nomi.map(parte => parte.charAt(0).toUpperCase());
+                  })
+              )
+          ].sort();
+
+          const accordionContainer = document.getElementById("accordionPersonaggi");
+          accordionContainer.parentElement.classList.add("bg-filter", "p-4");
+
+          accordionContainer.innerHTML = iniziali.map(iniziale => {
+              const personaggiFiltrati = personaggi.filter(nome => {
+                  const nomi = nome.split(" ");
+                  return nomi.some(parte => parte.charAt(0).toUpperCase() === iniziale);
+              });
+              
+              return `
+                  <div class="accordion-item bg-white border-0">
+                      <h2 class="accordion-header" id="heading${iniziale}">
+                          <button class="accordion-button collapsed bg-white text-dark fw-bold border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${iniziale}" aria-expanded="false" aria-controls="collapse${iniziale}">
+                              ${iniziale}
+                          </button>
+                      </h2>
+                      <div id="collapse${iniziale}" class="accordion-collapse collapse" aria-labelledby="heading${iniziale}" data-bs-parent="#accordionPersonaggi">
+                          <div class="accordion-body bg-white">
+                              <ul class="list-unstyled">
+                                  ${personaggiFiltrati.map(nome => `<li><a href="#personaggio-${nome.replace(/\s+/g, "-")}" class="mytext-link fw-bold text-decoration-none scroll-link">${nome}</a></li>`).join("")}
+                              </ul>
+                          </div>
+                      </div>
+                  </div>`;
+          }).join("");
+
+          // Riduzione dello scrolling per la navbar sticky-top
+          document.querySelectorAll(".scroll-link").forEach(link => {
+              link.addEventListener("click", function (e) {
+                  e.preventDefault();
+                  const targetId = this.getAttribute("href").substring(1);
+                  const target = document.getElementById(targetId);
+                  if (target) {
+                      const navbarHeight = document.querySelector(".navbar").offsetHeight;
+                      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 10;
+                      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+                  }
+              });
+          });
+
+          // Aggiunge l'effetto hover sui nomi
+          document.querySelectorAll(".scroll-link").forEach(link => {
+              link.addEventListener("mouseenter", function () {
+                  this.classList.add("text-decoration-underline");
+              });
+              link.addEventListener("mouseleave", function () {
+                  this.classList.remove("text-decoration-underline");
+              });
+          });
+      });
+});
