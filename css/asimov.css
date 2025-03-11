@@ -1,3 +1,9 @@
+/* Colori utilizzati */
+/* Colore link:					#0dcaf0 azzurro */
+/* Colore hover:				#0dcaf0 azzurro */
+/* Colori sfondo e testo:		#000000 nero
+								#FFFFFF bianco	*/
+
 /* Body */
 body {
     font-family: 'Lato', sans-serif !important;
@@ -12,7 +18,7 @@ body {
 .separator {
     width: 50%;
     margin: 40px auto;
-    border: 1px solid #000;
+    border: 1px solid #000000;
     opacity: 0.7;
 }
 
@@ -26,33 +32,35 @@ body {
 
 .navbar-nav .nav-link:hover {
     color: #0dcaf0 !important;
-    text-decoration: underline  !important;
+    text-decoration: underline !important;
 }
 
 .navbar-nav .nav-item .nav-link.active {
-    color: #000 !important;
+    color: #000000 !important;
     background-color: #0dcaf0 !important;
     border-radius: 5px;
 }
 
+/* Dropdown barra di navigazione */
 .navbar .dropdown-menu .dropdown-item {
     font-size: 18px;
     padding: 5px 10px;
 }
 
-.dropdown-menu {
-    background-color: #000 !important; /* Sfondo scuro */
-}
-
 .dropdown-item {
-    color: #0dcaf0 !important; /* Colore del testo */
+    color: #0dcaf0 !important;
 }
 
 .dropdown-item:hover {
-    background-color: #000 !important; /* Sfondo al passaggio del mouse */
+    background-color: #000000 !important;
     color: #0dcaf0 !important;
     text-decoration: underline !important;
 }
+
+.dropdown-menu {
+    background-color: #000000 !important;
+}
+
 
 
 /* CAROSELLO */
@@ -450,6 +458,9 @@ footer h5 {
 /* Adattamento per schermi mobili del carosello delle leggi */
 @media (max-width: 768px) {
     #CaroselloTop {
+        width: 90% !important;
+    }
+    #imgMappa  {
         width: 90% !important;
     }
 }
