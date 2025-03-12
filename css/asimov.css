@@ -441,12 +441,6 @@ footer h5 {
     .img-enlarge {
         width: 100% !important;
         max-width: 100% !important;
-        /* width: 100vw !important;
-        max-width: none !important;
-        display: block;
-        margin-left: auto !important;  
-        margin-right: auto !important;
-        padding: 0 !important; */
     }
   }
   
