@@ -465,7 +465,8 @@ footer h5 {
 /* Adattamento per schermi mobili delle mappe concettuali e dei wireframe */
 @media (max-width: 768px) {
     .img-enlarge {
-      width: 90% !important;
+      width: 90vw !important;
+      max-width: none !important;
     }
   }
   
