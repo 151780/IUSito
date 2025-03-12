@@ -428,23 +428,25 @@ footer h5 {
 }
   
 
-
-/* Adattamento per schermi mobili del carosello delle leggi */
+/* Adattamenti per schermi mobili */
+/* Carosello delle leggi */
 @media (max-width: 768px) {
     #CaroselloTop {
         width: 90% !important;
     }
 }
 
-/* Adattamento per schermi mobili delle mappe concettuali e dei wireframe */
+/* Mappe concettuali e wireframe */
 @media (max-width: 768px) {
     .img-enlarge {
-      width: 100vw !important;
-      max-width: none !important;
-      display: block;
-      margin-left: auto !important;  
-      margin-right: auto !important;
-      padding: 0 !important;
+        width: 90% !important;
+        max-width: 90% !important;
+        /* width: 100vw !important;
+        max-width: none !important;
+        display: block;
+        margin-left: auto !important;  
+        margin-right: auto !important;
+        padding: 0 !important; */
     }
   }
   
