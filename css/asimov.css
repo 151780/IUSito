@@ -62,49 +62,17 @@ body {
 }
 
 
-
 /* CAROSELLO */
-/* Carosello formattazione */
 #CaroselloTop {
     width: 50%;
     max-height: 400px;
     overflow: hidden;
 }
+
+/* Immagine all'interno */
 #CaroselloTop img {
     height: 400px;
     object-fit: cover;
-}
-
-
-/* Carosello testi */
-.carousel-txt {
-    color: #0dcaf0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 15px; 
-    display: inline-block;
-    border-radius: 5px; 
-}
-
-.carousel-txt a {
-    color: #0dcaf0; 
-}
-
-.carousel-txt a:hover {
-    color: rgb(255, 255, 255);
-}
-
-.carousel-title {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 15px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.carousel-caption {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 /* Carosello frecce */
@@ -465,7 +433,7 @@ footer h5 {
 /* Adattamento per schermi mobili delle mappe concettuali e dei wireframe */
 @media (max-width: 768px) {
     .img-enlarge {
-      width: 90vw !important;
+      width: 100vw !important;
       max-width: none !important;
       display: block !important;
       margin-left: auto !important;  
@@ -477,3 +445,33 @@ footer h5 {
 
 
 
+/* Testi Carosello */
+/* .carousel-txt {
+    color: #0dcaf0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 15px; 
+    display: inline-block;
+    border-radius: 5px; 
+}
+
+.carousel-txt a {
+    color: #0dcaf0; 
+}
+
+.carousel-txt a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.carousel-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
