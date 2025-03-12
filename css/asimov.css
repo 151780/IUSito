@@ -3,6 +3,9 @@
 /* Colore hover:				#0dcaf0 azzurro */
 /* Colori sfondo e testo:		#000000 nero
 								#FFFFFF bianco	*/
+/* Colore torna su:             #0dcaf099 azzurro trasparente 
+        hover:                  #0dcaf0ee azzurro meno trasparente */
+
 
 /* Body */
 body {
@@ -13,6 +16,22 @@ body {
 .descr-text {
     font-size: 18px;
 }
+
+/* Link a pagine nel testo descrittivo */
+.mytext-link {
+    color: #0dcaf0;
+    text-decoration: none;
+}
+
+.mytext-link a {
+    text-decoration: none;
+}
+
+.mytext-link:hover {
+    color: #0dcaf0;
+    text-decoration: underline;
+}
+
 
 /* Separatore */
 .separator {
@@ -75,7 +94,7 @@ body {
     object-fit: cover;
 }
 
-/* Carosello frecce */
+/* Frecce */
 span.carousel-control-next-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
     filter: invert(45%) sepia(100%) saturate(500%) hue-rotate(170deg);
@@ -100,10 +119,10 @@ span.carousel-control-prev-icon {
 }
 
 .book-card {
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     border-radius: 10px;
     padding: 15px;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 
@@ -127,51 +146,38 @@ span.carousel-control-prev-icon {
     text-decoration: underline;
 }
 
-/* Link a pagine nel testo */
-.mytext-link {
-    color: #0dcaf0;
-    text-decoration: none;
-}
 
-.mytext-link a {
-    text-decoration: none;
-}
-
-.mytext-link:hover {
-    color: #0dcaf0;
-    text-decoration: underline;
-}
-
-/* Slider barra del tempo */
+/* Slider barra del tempo noUi*/
 .noUi-connect {
     background: #0dcaf0 !important;
 }
 
 .noUi-handle {
-    background: #fff !important;
-    border: 2px solid #000;
+    background: #ffffff !important;
+    border: 2px solid #000000;
     width: 20px !important;
     height: 20px !important;
     cursor: default;
 }
 
 .noUi-base {
-    background: #ddd !important;
+    background: #dddddd !important;
 }
 
 .noUi-tooltip {
-    background: #fff !important;
-    color: #000 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
     border-radius: 5px;
     font-weight: bold;
     font-size: 14px !important;
 }
 
 .transparent-bg {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
 }
 
 /* Pagina cicli */
+/* Immagine */
 .img-cicli {
     max-height: 150px;
     width: auto;
@@ -182,11 +188,11 @@ span.carousel-control-prev-icon {
     display: flex;
 }
 
-
+/* Pulsanti */
 .puls-cicli {
     font-weight: bold !important;
-    background-color: black !important;
-    border: 2px solid black;
+    background-color: #000000 !important;
+    border: 2px solid #000000;
     border-radius: 10px;
     color: #0dcaf0;
     transition: all 0.3s ease;
@@ -194,8 +200,8 @@ span.carousel-control-prev-icon {
   
 .puls-cicli:hover {
     text-decoration: underline;
-    background-color: black;
-    border-color: black;
+    background-color: #000000;
+    border-color: #000000;
     color: #0dcaf0 !important;
 }
   
@@ -212,6 +218,7 @@ span.carousel-control-prev-icon {
 }
 
 /* WPP */
+/* Indice livello 1 */
 .myidx-link-1 {
     color: #0dcaf0;
     text-decoration: none;
@@ -227,6 +234,7 @@ span.carousel-control-prev-icon {
     text-decoration: underline;
 }
 
+/* Indice livello 2 */
 .myidx-link-2 {
     color: #0dcaf0;
     text-decoration: none;
@@ -243,10 +251,10 @@ span.carousel-control-prev-icon {
     text-decoration: underline;
 }
 
+/* Indice livello 3 */
 .myidx-link-3 {
     color: #0dcaf0;
     text-decoration: none;
-    /* font-weight: bold; */
     font-style: italic;
 }
 
@@ -261,7 +269,7 @@ span.carousel-control-prev-icon {
 
 /* Footer */
 footer {
-    background-color: #000 !important;
+    background-color: #000000 !important;
 }
 
 footer .nav-link {
@@ -274,7 +282,7 @@ footer .nav-link:hover {
 }
 
 footer h5 {
-    color: #fff !important;
+    color: #ffffff !important;
 }
 
 .sharethis-inline-follow-buttons {
@@ -287,20 +295,20 @@ footer h5 {
 
 /* Indicatori di pagina catalogo opere */
 .pagination .page-item .page-link {
-    background-color: #000;
+    background-color: #000000;
     color: #0dcaf0;
-    border-color: #000;
+    border-color: #000000;
 }
 
 .pagination .page-item.active .page-link {
     background-color: #0dcaf0;
-    color:#000;
+    color:#000000;
     pointer-events: none;
     cursor: default;
 }
 
 .pagination .page-item:not(.active) .page-link:hover {
-    background-color: #000;
+    background-color: #000000;
     color: #0dcaf0;
     text-decoration: underline;
 }
@@ -321,7 +329,7 @@ footer h5 {
     left: 45%;
     width: 100px;
     height: 50px;
-    background-color: #0dccf299;
+    background-color: #0dcaf099;
     color: white;
     border: none;
     border-radius: 5px;
@@ -332,38 +340,15 @@ footer h5 {
 }
 
 #btnTop:hover {
-    background-color: #0dccf2cc;
+    background-color: #0dcaf0ee;
 }
   
-/* Overlay immagine personaggio */
-.overlay-img {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color:#0dcaf0;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    pointer-events: none;
-}
-
-.position-relative:hover .overlay-img {
-    opacity: 1;
-}
-
 /* Sezione filtri */
 .bg-filter {
     background-color: #0dcaf0 !important;
 }
 
-/* Mappa impero inserita in container con scroll orizzontale per garantire visualizzazione sui mobili*/
+/* Mappa impero con tooltip inserita in container con scroll orizzontale per garantire visualizzazione sui mobili */
 #tooltip {
     position: absolute;
     background: #00000088;
@@ -389,10 +374,33 @@ footer h5 {
     display: inline-block;
 }
 
-
 #mappa {
     display: block;
 }
+
+/* Overlay immagine personaggio */
+.overlay-img {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000bb;
+    color:#0dcaf0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.position-relative:hover .overlay-img {
+    opacity: 1;
+}
+
 
 /* Modali pianeti e personaggi */
 .modal-body {
@@ -403,22 +411,20 @@ footer h5 {
     background-color: #000000;
     padding: 20px;
 }
-  
 
 #popupImage {
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
 }
-  
 
 #popupModalLabel {
     font-weight: bold;
-    color: black;
+    color: #000000;
 }
   
 #popupText {
-    color: white;
+    color: #ffffff;
 }
   
 
