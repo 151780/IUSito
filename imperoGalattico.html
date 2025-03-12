@@ -14,6 +14,7 @@
 		<!-- JS -->
 		<script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
 		<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons&source=platform" async="async"></script>	<!-- ShareThis -->
+		<script src="js/popupMappa.js" defer></script>               <!-- caricamento file .csv e gestione filtri -->
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -144,7 +145,7 @@
 				</h5>
 
 				<div class="row mx-auto">
-	
+					<!-- Descrizione -->
 					<div class="col-md-5 px-3 my-3 bg-white mx-auto d-flex">
 						<p class="descr-text">
 							Nei romanzi del <a href="cicloRobot.html" class="mytext-link"><strong>Ciclo dei Robot</strong></a>, del 
@@ -166,6 +167,7 @@
 						</p>
 					</div>
 					
+					<!-- Mappa -->
 					<div class="col-md-5 px-3 my-3 mx-auto d-flex justify-content-center container-fluid">
 						<div class="scroll-container justify-content-center">
 							<div class="position-relative">
@@ -197,10 +199,12 @@
 								'La Terra rappresenta uno degli elementi in comune tra i cicli della Fondazione, dell\'Impero e dei Robot scritti da Isaac Asimov. È una delle ambientazioni oppure è nominata in quasi tutti i romanzi che compongono questi cicli; non se ne parla solamente ne Il crollo della Galassia centrale e in L\'altra faccia della spirale.'
 								)">
 						</map>
+					</div>
 
-						<div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
-							<div class="modal-dialog">
-								<div class="modal-content">
+					<!-- Modale immagine mondo -->
+					<div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
 								<div class="modal-header">
 									<h5 class="modal-title" id="popupModalLabel">Titolo del Popup</h5>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -209,62 +213,13 @@
 									<img id="popupImage" src="" alt="Immagine" class="img-fluid mb-3">
 									<p class="descr-text" id="popupText">Testo del popup.</p>
 								</div>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
-			<script>
-				function openPopup(title, imgSrc, text) {
-					document.getElementById('popupModalLabel').innerText = title;
-					document.getElementById('popupImage').src = imgSrc;
-					document.getElementById('popupText').innerText = text;
-					var modal = new bootstrap.Modal(document.getElementById('popupModal'));
-					modal.show();
-				}
-			</script>
-
-			<script>
-				function showTooltip(event) {
-					var tooltip = document.getElementById("tooltip");
-					tooltip.style.display = "block";
-					moveTooltip(event);
-				}
-
-				function moveTooltip(event) {
-					var tooltip = document.getElementById("tooltip");
-					var image = document.getElementById("mappa");
-
-					// Otteniamo la posizione del mouse rispetto alla pagina
-					var mouseX = event.pageX;
-					var mouseY = event.pageY;
-
-					// Calcoliamo la posizione dell'immagine relativamente alla pagina
-					var imageRect = image.getBoundingClientRect();
-
-					// Aggiungiamo gli offset relativi all'immagine centrata
-					var offsetX = 15;
-					var offsetY = 15;
-
-					// Consideriamo lo scroll verticale della pagina
-					var scrollY = window.scrollY || document.documentElement.scrollTop;
-
-					// Calcoliamo la posizione del tooltip in base all'immagine, al mouse e allo scroll
-					var tooltipX = mouseX - imageRect.left + offsetX;
-					var tooltipY = mouseY - imageRect.top + offsetY - scrollY;
-
-					// Posizioniamo il tooltip
-					tooltip.style.left = tooltipX + "px";
-					tooltip.style.top = tooltipY + "px";
-				}
-
-				function hideTooltip() {
-					document.getElementById("tooltip").style.display = "none";
-				}
-			</script>
 		</main>
+
 		<!-- Footer -->
 		<footer class="container-fluid row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-black">
 			<div class="col mb-3">

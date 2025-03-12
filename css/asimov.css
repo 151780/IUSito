@@ -439,8 +439,8 @@ footer h5 {
 /* Mappe concettuali e wireframe */
 @media (max-width: 768px) {
     .img-enlarge {
-        width: 90% !important;
-        max-width: 90% !important;
+        width: 100% !important;
+        max-width: 100% !important;
         /* width: 100vw !important;
         max-width: none !important;
         display: block;

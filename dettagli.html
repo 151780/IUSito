@@ -40,7 +40,7 @@
 		<META name="DC.Language" content="it"/>
 	</head>
         
-	<body>
+	<body onload="mostraDettagli()">
 		<!-- Header -->
 		<header>
 			<section class="container-fluid">
@@ -140,28 +140,30 @@
 			</div>
 			<!-- Breadcrumbs end -->
 		</main>
-	</body>
 
-	<body onload="mostraDettagli()" class="container-fluid">
-		<h1 id="titolo" class="text-center mb-4"></h1>
-		<div class="row align-items-start">
-			<div class="col-md-4 text-center">
-				<img id="copertina" class="img-fluid" style="max-height: 400px;">
+		<!-- Scheda opera -->
+		<section class="container-fluid">
+			<h1 id="titolo" class="text-center mb-4"></h1>
+			<div class="row align-items-start">
+				<div class="col-md-4 text-center">
+					<img id="copertina" class="img-fluid" style="max-height: 400px;">
+				</div>
+				<div class="col-md-8">
+					<p><span style="display: inline-block; width: 200px;">Tipo</span> <strong id="tipo"></strong></p>
+					<p><span style="display: inline-block; width: 200px;">Genere</span> <strong id="genere"></strong></p>
+					<p>
+						<span style="display: inline-block; width: 200px;">Ciclo</span> 
+						<a id="cicloLink" href="#" target="_blank" class="mytext-link"><strong id="ciclo"></strong></a>
+					</p>
+					<p><span style="display: inline-block; width: 200px;">Anno di pubblicazione</span> <strong id="anno"></strong></p>
+					<p><span style="display: inline-block; width: 200px;">ISBN</span> <strong id="isbn"></strong></p>
+					<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Cronologico</span> <strong id="ordine1"></strong></p>
+					<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Logico</span> <strong id="ordine2"></strong></p>
+					<p><span>Sinossi</span></p>
+					<p id="sinossi">Caricamento sinossi...</p>			
+				</div>
 			</div>
-			<div class="col-md-8">
-				<p><span style="display: inline-block; width: 200px;">Tipo</span> <strong id="tipo"></strong></p>
-				<p><span style="display: inline-block; width: 200px;">Genere</span> <strong id="genere"></strong></p>
-				<p>
-					<span style="display: inline-block; width: 200px;">Ciclo</span> 
-					<a id="cicloLink" href="#" target="_blank" class="mytext-link"><strong id="ciclo"></strong></a>
-				</p>
-				<p><span style="display: inline-block; width: 200px;">Anno di pubblicazione</span> <strong id="anno"></strong></p>
-				<p><span style="display: inline-block; width: 200px;">ISBN</span> <strong id="isbn"></strong></p>
-				<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Cronologico</span> <strong id="ordine1"></strong></p>
-				<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Logico</span> <strong id="ordine2"></strong></p>
-				<p><span>Sinossi</strong>
-				<p id="sinossi">Caricamento sinossi...</p>			</div>
-		</div>
+		</section>
 	</body>
 	
 	<!-- Footer -->
