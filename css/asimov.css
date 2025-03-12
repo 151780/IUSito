@@ -460,10 +460,15 @@ footer h5 {
     #CaroselloTop {
         width: 90% !important;
     }
-    #imgmappa  {
-        width: 90% !important;
-    }
 }
+
+/* Adattamento per schermi mobili delle mappe concettuali e dei wireframe */
+@media (max-width: 768px) {
+    .img-enlarge {
+      width: 90% !important;
+    }
+  }
+  
 
 
 
