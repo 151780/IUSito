@@ -14,6 +14,7 @@
 		<!-- JS -->
 		<script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
 		<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons&source=platform" async="async"></script>	<!-- ShareThis -->
+		<script src="js/tornaSuPB.js" defer></script>               <!-- gestione pulsante torna su -->
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -654,25 +655,6 @@
 
 		<!-- Pulsante Torna su -->
 		<button onclick="scrollToTop()" id="btnTop" title="Torna su">Torna su</button>
-
-		<script>
-		// Mostra/nasconde il pulsante quando si scorre
-			window.onscroll = function() { toggleButton() };
-
-			function toggleButton() {
-			let btn = document.getElementById("btnTop");
-			if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-				btn.style.display = "block"; // Mostra il pulsante
-			} else {
-				btn.style.display = "none"; // Nasconde il pulsante
-			}
-			}
-
-			// Funzione per tornare in cima
-			function scrollToTop() {
-			window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll fluido verso l'alto
-			}
-		</script>
 
 	</body>	  
 </html>

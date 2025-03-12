@@ -14,6 +14,7 @@
 		<!-- JS -->
 		<script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
 		<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons&source=platform" async="async"></script>	<!-- ShareThis -->
+		<script src="js/mostraDettagli.js" defer></script>               <!-- caricamento file .csv e gestione filtri -->
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -140,70 +141,6 @@
 			<!-- Breadcrumbs end -->
 		</main>
 	</body>
-
-
-    <script>
-			function getQueryParams() {
-				const params = new URLSearchParams(window.location.search);
-				return {
-					titolo: params.get("titolo"),
-					tipo: params.get("tipo"),
-					ciclo: params.get("ciclo"),
-					ordine1: params.get("ordine1"),
-					ordine2: params.get("ordine2"),
-					isbn: params.get("isbn"),
-					img: params.get("img"),
-					link: params.get("link"),
-					anno: params.get("anno"),
-					genere: params.get("genere")
-				};
-			}
-
-			function formatLinks(text) {
-      			return text.replace(/<link\s+\"(.*?)\">(.*?)<\/link>/g, '<a href="$1" target="_blank" class="mytext-link">$2</a>');
-    		}
-
-			function mostraDettagli() {
-				const libro = getQueryParams();
-				const dataCompleta = libro.anno ? `${libro.anno}-01-01` : "";
-				const cicloLink = document.getElementById("cicloLink");
-
-				document.getElementById("titolo").innerText = libro.titolo;
-				document.getElementById("tipo").innerText = libro.tipo;
-				document.getElementById("ciclo").innerText = libro.ciclo;
-				document.getElementById("ordine1").innerText = libro.ordine1;
-				document.getElementById("ordine2").innerText = libro.ordine2 > 1000 ? "-" : libro.ordine2;
-				document.getElementById("isbn").innerText = libro.isbn;
-				document.getElementById("copertina").src = libro.img;
-				document.getElementById("anno").innerText = libro.anno;
-				document.getElementById("genere").innerText = libro.genere;
-
-				document.querySelector('meta[name="DC.Title"]').setAttribute("content", libro.titolo);
-				document.querySelector('meta[name="DC.Subject"]').setAttribute("content", libro.genere);
-				document.querySelector('meta[name="DC.Description"]').setAttribute("content", libro.ciclo);
-				document.querySelector('meta[name="DC.Date"]').setAttribute("content", dataCompleta);
-				document.querySelector('meta[name="DC.Type"]').setAttribute("content", libro.tipo);
-
-				if (libro.ciclo && libro.ciclo.toLowerCase() !== "nessuno") {
-					url = "ciclo" + encodeURIComponent(libro.ciclo) + ".html";
-					cicloLink.href = url;
-					cicloLink.style.display = "inline";
-				} else {
-					cicloLink.style.display = "none";
-				}				
-
-				// Carica la sinossi
-				fetch(libro.link)
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById("sinossi").innerHTML = formatLinks(data);
-						document.querySelector('meta[name="DC.Description"]').setAttribute("content", data);
-					})
-					.catch(error => {
-						document.getElementById("sinossi").innerText = "Sinossi non disponibile.";
-					});
-			}
-    </script>
 
 	<body onload="mostraDettagli()" class="container-fluid">
 		<h1 id="titolo" class="text-center mb-4"></h1>
