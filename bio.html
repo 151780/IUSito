@@ -22,18 +22,22 @@
 		<link rel="manifest" href="favicon/site.webmanifest">
 
 		<!-- Titolo -->
-		<title> Isaac Asimov - Ciclo dell'Impero </title>
+		<title> Isaac Asimov - Bio </title>
 
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 		<!-- Dublin Core -->
 		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
-		<META name="DC.Title" content="Ciclo dell'Impero"/>
-		<META name="DC.Creator" content="Isaac Asimov"/>
-		<META name="DC.Subject" content="Fantascienza"/>
-		<META name="DC.Description" content="Serie di Romanzi"/>
-		<META name="DC.Format" content="Documento cartaceo"/>
+		<META name="DC.Title" content="Isaac Asimov"/>
+		<META name="DC.Creator" content="Roberto Mazzoni"/>
+		<META name="DC.Subject" content="Opere di Isaac Asimov"/>
+		<META name="DC.Description" content="Sito dedicato alle opere di Isaac Asimov"/>
+		<META name="DC.Publisher" content="github.com"/>
+		<META name="DC.Date" content="2025-03-19"/>
+		<META name="DC.Type" content="Produzione letteraria"/>
+		<META name="DC.Format" content="Sito web HTML"/>
+		<META name="DC.Source" content="Wikipedia"/>
 		<META name="DC.Language" content="it"/>
 	</head>
         
@@ -47,7 +51,7 @@
 					</div>
 					<div class="col-8">
 						<h1 class="text-center mb-4"><strong>Isaac Asimov</strong></h2>
-						<h2 class="text-center mb-4">I cicli letterari</h3>
+						<h2 class="text-center mb-4">Biografia</h3>
 					</div>
 				</div>
 			</section>
@@ -56,7 +60,7 @@
 
 		<main>
 			<!-- Menu navigazione -->
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="NavBar">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="NavBar">
 				<div class="container-fluid">
 					<!-- Logo / Home -->
 					<a class="navbar-brand" href="about.html">
@@ -74,7 +78,7 @@
 							</li>
 							<!-- Bio -->
 							<li class="nav-item">
-								<a class="nav-link" href="bio.html">Bio</a>
+								<a class="nav-link active" aria-current="page" href="#">Bio</a>
 							</li>
 							<!-- Opere -->
 							<li class="nav-item">
@@ -82,11 +86,11 @@
 							</li>
 							<!-- Cicli con dropdown su ciclo -->
 							<li class="nav-item dropdown">
-								<a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="cicloRobot.html">Ciclo dei Robot</a></li>
 									<li><a class="dropdown-item" href="cicloFondazione.html">Ciclo della Fondazione</a></li>
-									<li><a class="dropdown-item active" href="#">Ciclo dell'Impero</a></li>
+									<li><a class="dropdown-item" href="cicloImpero.html">Ciclo dell'Impero</a></li>
 								</ul>
 							</li>
 							<!-- Personaggi -->
@@ -126,91 +130,18 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
 						<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Ciclo dell'Impero</li>
+						<li class="breadcrumb-item active" aria-current="page">Bio</li>
 					</ol>
 				</nav>
 			</div>
 			<!-- Breadcrumbs end -->
 
-			<!-- Descrizione -->
 			<section class="container-fluid px-3 my-3 mx-auto">
 				<!-- Titolo sopra la sezione -->
-				<h2 class="text-center mb-4"><strong>Ciclo dell'Impero</strong></h2>
-
-				<!-- Immagine e pulsanti -->
-				<div class="row mb-3 d-flex align-items-center w-75 row-cicli mx-auto">
-					<!-- Pulsante a personaggi -->
-					<div class="col-md-3 text-center">
-						<a href="personaggi.html?filterCiclo=Impero" target="_blank">
-							<button type="button" class="btn btn-outline-info w-50 puls-cicli">Personaggi</button>
-						</a>
-					</div>
-					<!-- Immagine caratteristica -->
-					<div class="col-md-6 text-center">
-						<img src="img/cicloImpero.jpg" class="img-fluid img-cicli mx-auto" alt="Ciclo Impero">
-					</div>
-					<!-- Pulsante a opere -->
-					<div class="col-md-3 text-center">
-						<a href="opere.html?filterCiclo=Impero" target="_blank">
-							<button type="button" class="btn btn-outline-info w-50 puls-cicli">Opere</button>
-						</a>
-					</div>
-				</div>
-
-				<!-- Descrizione -->
-				<div class="container-fluid bg-black text-white w-75 p-4 mx-auto">
-					<p>Il Ciclo dell'Impero è una serie composta da tre romanzi di fantascienza scritti da Isaac Asimov tra il 1950 e il 1952.
-						In ordine di composizione, i tre romanzi sono:
-						<a href="opere.html?filterCiclo=Impero" class="mytext-link">
-							<ul>
-								<li><em>Paria dei cieli</em> (<em>Pebble in the Sky</em>, 1950)</li>
-								<li><em>Il tiranno dei mondi</em> (<em>The Stars, Like Dust</em>, 1951), conosciuto anche come <em>Stelle come polvere</em></li>
-								<li><em>Le correnti dello spazio</em> (<em>The Currents of Space</em>, 1952)</li>
-							</ul>
-						</a>
-					</p>
-					<p>
-						I tre romanzi sono ambientati nello stesso futuro del <a href="cicloFondazione.html" class="mytext-link">Ciclo della Fondazione</a>, 
-						la cui trilogia originale era stata pubblicata in forma di racconti tra il 1942 e il 1950. 
-						I due cicli sono connessi solo debolmente l'uno all'altro, 
-						così come i romanzi sono completamente indipendenti l'uno dall'altro; 
-						il legame è dato da alcuni dettagli, come l'idea di un Impero Galattico, il pianeta Trantor, la radioattività della Terra 
-						e alcune tecnologie, come ad esempio i balzi iperspaziali, le fruste neuroniche e il Visisonor, 
-						un particolare strumento musicale che appare sia nel Tiranno dei mondi che nella seconda parte di Il crollo della Galassia centrale.
-					</p>
-					<p>
-						Successivamente, Asimov stabilì una connessione anche tra questi romanzi e il cosiddetto ciclo dei Robot: 
-						in particolare in I Robot e l'Impero (Robots and Empire) spiega l'origine della radioattività della Terra, 
-						rinnegando la spiegazione della guerra nucleare che era stata fornita in Paria dei cieli e 
-						che Biron Farril chiarisce bene in Il tiranno dei mondi.
-					</p>
-					<p>
-						«Cose passate.<br />
-						Le bombe nucleari avevano devastato la superficie della Terra.<br />
-						La maggior parte del pianeta era diventata radioattiva.»
-					</p>
-					<p>
-						Nella prefazione di Preludio alla Fondazione, lo stesso Asimov indicava come ordine cronologico interno la sequenza 
-						<ul>
-							<li><em>Le correnti dello spazio</em></li>
-							<li><em>Il tiranno dei mondi</em></li>
-							<li><em>Paria dei cieli</em></li>
-						</ul>
-						Mentre quest'ultimo è sicuramente quello ambientato più nel futuro 
-						(in esso è presente l'Impero Galattico, che negli altri romanzi non si è ancora formato), 
-						l'ordine degli altri due è stato contestato sulla base di diversi elementi: 
-						nel Tiranno dei mondi la Terra è riconosciuta come culla dell'umanità, mentre 
-						nelle Correnti dello spazio tale nozione si è persa; 
-						settecento anni prima del Tiranno dei mondi i mondi colonizzati sono circa 1100, 
-						mentre al tempo delle Correnti dello spazio i mondi sono un milione, 
-						metà dei quali sono sotto il controllo di Trantor, che cinquecento anni prima controllava 500 pianeti; 
-						lo stesso dominio di Trantor è descritto, nelle Correnti dello spazio, vicino ad una fase imperiale.
-					</p>
-				</div>
+				<h2 class="text-center mb-4"><strong>Biografia</strong></h2>
 			</section>
-			<!-- Descrizione end -->
 		</main>
-			
+	
 		<!-- Footer -->
 		<footer class="container-fluid row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-black">
 			<div class="col mb-3">
@@ -252,6 +183,5 @@
 			</div>
 		</footer>
 		<!-- Footer end -->
-	</body>
-	  
+	</body>	  
 </html>
