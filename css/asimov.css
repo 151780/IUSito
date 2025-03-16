@@ -145,6 +145,19 @@ span.carousel-control-prev-icon {
     background-color: #ffffff;
 }
 
+.book-card h4, .book-card p {
+    color: #000000;
+    text-decoration: none;
+}
+
+.book-card a {
+  text-decoration: none;
+}
+
+.book-card a:hover {
+  text-decoration: none;
+  color: #000000;
+}
 
 /* Breadcrumbs */
 .breadcrumb-item a {
@@ -460,6 +473,14 @@ footer h5 {
     .img-enlarge {
         width: 100% !important;
         max-width: 100% !important;
+    }
+}
+
+/* Testo nelle book-card */
+@media (max-width: 768px) {
+    .book-card h4, .book-card p {
+        font-size: small;
+        word-wrap: break-word;
     }
 }
   
