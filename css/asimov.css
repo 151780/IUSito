@@ -477,7 +477,7 @@ footer h5 {
 }
 
 /* Testo nelle book-card */
-@media (max-width: 768px) {
+@media (max-width: 1024px) and (orientation: landscape) {
     .book-card h4, .book-card p {
         font-size: small;
         word-wrap: break-word;
