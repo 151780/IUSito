@@ -1,24 +1,22 @@
-let libri = [];
-let libriFiltrati = [];
-let libriPerPagina = 12;
-let paginaCorrente = 1;
+let libri = [];           // array oggetti libro
+let libriFiltrati = [];   // array oggetti libro filtrati in base a impostazione filtri
+let libriPerPagina = 12;  // numero di libri per ogni pagina
+let paginaCorrente = 1;   // pagina iniziale di visualizzazione
 
-// Cartella immagini
-const imgBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/img/";
-// Cartella sinossi
-const sinossiBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/data/sinossi/";
+const imgBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/img/";   // cartella immagini
+const sinossiBaseUrl = "https://raw.githubusercontent.com/151780/IUSito/main/data/sinossi/";   // cartella sinossi 
 
 // Lettura file libri
 function caricaCSVLibri() {
   $.get("https://raw.githubusercontent.com/151780/IUSito/main/data/libri.csv", function(data) {
       const righe = data.split("\n");
-    libri = righe.slice(1).map(riga => {
+      libri = righe.slice(1).map(riga => {  // costruzione array libri
         const [titolo, tipo, ciclo, ordine1, ordine2, isbn, img, link, anno, genere] = riga.split(",");
         return { titolo, tipo, ciclo, ordine1, ordine2, isbn, img : imgBaseUrl + img, link : sinossiBaseUrl + link, anno, genere};
     });
 
-    // Range anni e aggiornamento slider
-    const anni = libri.map(l => l.anno).filter(a => !isNaN(a));
+    // calcolo range anni e aggiornamento slider
+    const anni = libri.map(l => l.anno);
     minAnno = Math.min(...anni);
     maxAnno = Math.max(...anni);
     slider.noUiSlider.updateOptions({
@@ -26,11 +24,11 @@ function caricaCSVLibri() {
       start: [minAnno, maxAnno]
     });
 
-    aggiornaCatalogoLibri();
+    aggiornaCatalogoLibri();  // aggiornamento del catalogo
   });
 }
 
-// Slider
+// inizializzazion slider noUI
 let minAnno = 1900, maxAnno = 2100; 
 const slider = document.getElementById("sliderAnno");
 
@@ -49,13 +47,13 @@ noUiSlider.create(slider, {
   }
 });
 
-// Aggiornamento e scrittura libri filtrati su valori anni della linea del tempo
+// aggiornamento libri filtrati su valori anni della linea del tempo
 slider.noUiSlider.on("update", function(values) {
   $("#annoRange").text(`${values[0]} - ${values[1]}`);
   aggiornaCatalogoLibri();
 });
 
-// Funzione per leggere i parametri URL
+// Lettura parametri URL
 function getParametro(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -63,35 +61,58 @@ function getParametro(name) {
 
 // Aggiornamento e scrittura libri filtrati
 function aggiornaCatalogoLibri() {
-  const tipo = $("#filterTipo").val();
-  const ciclo = $("#filterCiclo").val();
+  const tipoFiltro = $("#filterTipo").val();
+  const cicloFiltro = $("#filterCiclo").val();
   const ordine = $("#filterOrdine").val();
   const titoloFiltro = $("#filterTitle").val().toLowerCase();
   const genereFiltro = $("#filterGenere").val().trim(); 
   const [annoInizio, annoFine] = slider.noUiSlider.get().map(Number);
   
-  // Filtriamo i libri
-  libriFiltrati = libri.filter(l => 
-    (titoloFiltro === "" || l.titolo.toLowerCase().includes(titoloFiltro)) &&
-    (tipo === "" || l.tipo === tipo) && 
-    (ciclo === "" || l.ciclo === ciclo) &&
-    (genereFiltro === "" || l.genere.trim() === genereFiltro) &&
-    (l.anno >= annoInizio && l.anno <= annoFine)
+  libriFiltrati = libri.filter(l =>                                             // definizione libri filtrati in base a 
+    (titoloFiltro === "" || l.titolo.toLowerCase().includes(titoloFiltro)) &&   // valore della casella di ricerca nel titolo
+    (tipoFiltro === "" || l.tipo === tipoFiltro) &&                             // tipo
+    (cicloFiltro === "" || l.ciclo === cicloFiltro) &&                          // ciclo
+    (genereFiltro === "" || l.genere.trim() === genereFiltro) &&                // genere
+    (l.anno >= annoInizio && l.anno <= annoFine)                                // anno di pubblicazione
   );
 
-  // Ordiniamo i libri
-  libriFiltrati.sort((a, b) => a[`ordine${ordine}`] - b[`ordine${ordine}`]);
+  libriFiltrati.sort((a, b) => a[`ordine${ordine}`] - b[`ordine${ordine}`]);    // e ordinamento a ordine1 o ordine2
 
-  // Mostriamo la prima pagina
   paginaCorrente = 1;
+  mostraPagina(paginaCorrente); // visualizzazione catalogo a partire dalla pagina corrente
+}
+
+// Aggiornamento della visualizzazione degli elementi di paginazione
+function aggiornaPaginazione() {
+  let numPagine = Math.ceil(libriFiltrati.length / libriPerPagina);
+  let paginazioneHTML = "";
+
+   for (let i = 1; i <= numPagine; i++) {   // costruzione dei singoli elementi di paginazione HTML in base alla pagina corrente
+    paginazioneHTML += `<li class="page-item ${i === paginaCorrente ? 'active' : ''}">
+                          <a class="page-link" href="#" onclick="cambiaPagina(${i})">${i}</a>
+                        </li>`;
+  }
+  // costruzione struttura completa HTML navigazione per pagine
+  $("#paginazione").html(`<nav>
+                            <ul class="pagination justify-content-center">
+                              ${paginazioneHTML}
+                            </ul>
+                          </nav>`);
+}
+
+// Aggiornamento della pagina su on click paginazione
+function cambiaPagina(pagina) {
+  paginaCorrente = pagina;
   mostraPagina(paginaCorrente);
 }
 
+// Visualizzazione pagina del catalogo richiesta
 function mostraPagina(pagina) {
-  let start = (pagina - 1) * libriPerPagina;
+  let start = (pagina - 1) * libriPerPagina;    // definizione dell'intervallo di libri da inserire nella pagina
   let end = start + libriPerPagina;
   let libriDaMostrare = libriFiltrati.slice(start, end);
 
+  // costruzione del catalogo HTML ciclando sui libri filtrati
   $("#catalogo").html(libriDaMostrare.map((l, index) => `
     <div id="oggetto-${index}" class="col-md-3 mb-3 card-container">
       <div class="card">
@@ -107,49 +128,27 @@ function mostraPagina(pagina) {
     </div>
   `).join(""));
 
-  aggiornaPaginazione();
+  aggiornaPaginazione();    // aggiorna la paginazione
 }
 
-function aggiornaPaginazione() {
-  let numPagine = Math.ceil(libriFiltrati.length / libriPerPagina);
-  let paginazioneHTML = "";
 
-  for (let i = 1; i <= numPagine; i++) {
-    paginazioneHTML += `<li class="page-item ${i === paginaCorrente ? 'active' : ''}">
-                          <a class="page-link" href="#" onclick="cambiaPagina(${i})">${i}</a>
-                        </li>`;
-  }
 
-  $("#paginazione").html(`<nav>
-                            <ul class="pagination justify-content-center">
-                              ${paginazioneHTML}
-                            </ul>
-                          </nav>`);
-}
+// Gestione evento on document loaded
+document.addEventListener("DOMContentLoaded", function () {
+  caricaCSVLibri();   // caricamento file CSV dei libri in catalogo
 
-function cambiaPagina(pagina) {
-  paginaCorrente = pagina;
-  mostraPagina(paginaCorrente);
-}
-
-$(document).ready(function() {
-  caricaCSVLibri();
-
-  // Acquisisce valori dei filtri Titolo e ciclo
-  const titoloFiltro = getParametro("filterTitle");
+  const titoloFiltro = getParametro("filterTitle"); // acquisizione dei valori dei filtri
   const cicloFiltro = getParametro("filterCiclo");
 
-  // Se esiste un valore, imposta il campo input e aggiorna il catalogo
   if (titoloFiltro) {
       $("#filterTitle").val(titoloFiltro);
-      aggiornaCatalogoLibri();  // Chiama la funzione che aggiorna i libri filtrati
   }
   if (cicloFiltro) {
       $("#filterCiclo").val(cicloFiltro);
-      aggiornaCatalogoLibri();  // Chiama la funzione che aggiorna i libri filtrati
   }
 
 
-  $("#filterTipo, #filterCiclo, #filterOrdine, #filterTitle, #filterGenere").on("change", aggiornaCatalogoLibri);
+  $("#filterTipo, #filterCiclo, #filterOrdine, #filterTitle, #filterGenere").on("change", aggiornaCatalogoLibri); // attivazione evento di cambio dei filtri
 });
+
 
