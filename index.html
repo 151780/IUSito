@@ -1,340 +1,336 @@
 <!DOCTYPE html>
 <html lang="It">
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <!-- Font -->
-      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-      
-      <!-- CSS -->
-      <link rel="stylesheet" href="css/asimov.css"/>          <!-- personale -->
-      <link rel="stylesheet" href="css/bootstrap.min.css"/>		<!-- Bootstrap -->
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/asimov.css"/>          <!-- personale -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>		<!-- Bootstrap -->
 
-      <!-- JS -->
-      <script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
-      <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons' async='async'></script>
+		<!-- JS -->
+		<script src="js/bootstrap.bundle.min.js"></script>			<!-- Bootstrap -->
+		<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=67b76625c91f7e0012cfda61&product=inline-share-buttons' async='async'></script>
 
-      <!-- Favicon -->
-      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-      <link rel="manifest" href="favicon/site.webmanifest">
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
 
-      <!-- Titolo -->
-      <title> Isaac Asimov </title>
+		<!-- Titolo -->
+		<title> Isaac Asimov </title>
 
-      <!-- Dublin Core -->
-      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
-      <META name="DC.Title" content="Isaac Asimov"/>
-      <META name="DC.Creator" content="Roberto Mazzoni"/>
-      <META name="DC.Subject" content="Opere di Isaac Asimov"/>
-      <META name="DC.Description" content="Sito dedicato alle opere di Isaac Asimov"/>
-      <META name="DC.Publisher" content="github.com"/>
-      <META name="DC.Date" content="2025-03-19"/>
-      <META name="DC.Type" content="Produzione letteraria"/>
-      <META name="DC.Format" content="Sito web HTML"/>
-      <META name="DC.Source" content="Wikipedia"/>
-      <META name="DC.Language" content="it"/>
-    </head>
+		<!-- Dublin Core -->
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+		<META name="DC.Title" content="Isaac Asimov"/>
+		<META name="DC.Creator" content="Roberto Mazzoni"/>
+		<META name="DC.Subject" content="Opere di Isaac Asimov"/>
+		<META name="DC.Description" content="Sito dedicato alle opere di Isaac Asimov"/>
+		<META name="DC.Publisher" content="github.com"/>
+		<META name="DC.Date" content="2025-03-19"/>
+		<META name="DC.Type" content="Produzione letteraria"/>
+		<META name="DC.Format" content="Sito web HTML"/>
+		<META name="DC.Source" content="Wikipedia"/>
+		<META name="DC.Language" content="it"/>
+	</head>
     
     <body>
-      <!-- Header -->
-      <header>
-        <img src="img/HeaderImg.jpg" class="img-fluid" alt="Isaac Asimov">
-      </header>
-      <!-- Header end -->
+		<!-- Header -->
+		<header>
+			<img src="img/HeaderImg.jpg" class="img-fluid" alt="Isaac Asimov">
+		</header>
+		<!-- Header end -->
 			
-      <!-- Main -->
-			<main>
-				<!-- Menu navigazione -->
-				<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="NavBar">
-					<div class="container-fluid">
-						<!-- Logo / Home -->
-						<a class="navbar-brand" href="about.html">
-							<img src="img/IA.jpg" alt="IA" height="40">
+      	<!-- Main -->
+		<main>
+			<!-- Menu navigazione -->
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="NavBar">
+				<div class="container-fluid">
+					<!-- Logo / Home -->
+					<a class="navbar-brand" href="about.html">
+						<img src="img/IA.jpg" alt="IA" height="40">
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLogo" aria-controls="navbarLogo" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- Voci menu -->
+					<div class="collapse navbar-collapse" id="navbarLogo">
+						<ul class="navbar-nav me-auto mb-2 mb-md-0">
+							<!-- Home -->
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#">Home</a>
+							</li>
+							<!-- Bio -->
+							<li class="nav-item">
+								<a class="nav-link" href="bio.html">Bio</a>
+							</li>
+							<!-- Opere -->
+							<li class="nav-item">
+								<a class="nav-link" href="opere.html">Opere</a>
+							</li>
+							<!-- Cicli con dropdown su ciclo -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="cicloRobot.html">Ciclo dei Robot</a></li>
+									<li><a class="dropdown-item" href="cicloFondazione.html">Ciclo della Fondazione</a></li>
+									<li><a class="dropdown-item" href="cicloImpero.html">Ciclo dell'Impero</a></li>
+								</ul>
+							</li>
+							<!-- Personaggi -->
+							<li class="nav-item">
+								<a class="nav-link" href="personaggi.html">Personaggi</a>
+							</li>
+							<!-- Premi -->
+							<li class="nav-item">
+								<a class="nav-link" href="premi.html">Premi</a>
+							</li>
+							<!-- Adattamenti -->
+							<li class="nav-item">
+								<a class="nav-link" href="adattamenti.html">Adattamenti</a>
+							</li>
+							<!-- Extra con dropdown -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Extra</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="leggi.html">Leggi della robotica</a></li>
+									<li><a class="dropdown-item" href="psicostoria.html">Psicostoria</a></li>
+									<li><a class="dropdown-item" href="imperoGalattico.html">Impero Galattico</a></li>
+									<li><a class="dropdown-item" href="collaborazioni.html">Collaborazioni</a></li>
+									<li><a class="dropdown-item" href="associazioni.html">Associazioni</a></li>
+								</ul>
+							</li>
+						</ul>
+						<form role="search">
+							<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+						</form>
+					</div>
+				</div>
+			</nav>
+			<!-- Menu navigazione end -->
+
+			<!-- Bio -->
+			<section class="container-fluid px-3 my-3 w-75 mx-auto">
+			<!-- Titolo sopra la sezione -->
+				<h1 class="text-center mb-4"><strong>Isaac Asimov</strong></h1>
+				<h2 class="text-center mb-4"><strong>Conoscere uno dei padri della robotica</strong></h2>
+
+				<div class="row bg-black d-flex justify-content-center">
+					<!-- Immagine -->
+					<div class="col-md-3 text-white p-4 text-center">
+						<a href="#">
+						<img src="img/asimov.jpeg" class="img-fluid rounded mb-2" alt="Isaac Asimov">
 						</a>
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLogo" aria-controls="navbarLogo" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<!-- Voci menu -->
-						<div class="collapse navbar-collapse" id="navbarLogo">
-							<ul class="navbar-nav me-auto mb-2 mb-md-0">
-								<!-- Home -->
-								<li class="nav-item">
-									<a class="nav-link active" aria-current="page" href="#">Home</a>
-								</li>
-                <!-- Bio -->
-                <li class="nav-item">
-                  <a class="nav-link" href="bio.html">Bio</a>
-                </li>
-								<!-- Opere -->
-								<li class="nav-item">
-									<a class="nav-link" href="opere.html">Opere</a>
-								</li>
-								<!-- Cicli con dropdown su ciclo -->
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cicli</a>
-									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="cicloRobot.html">Ciclo dei Robot</a></li>
-										<li><a class="dropdown-item" href="cicloFondazione.html">Ciclo della Fondazione</a></li>
-										<li><a class="dropdown-item" href="cicloImpero.html">Ciclo dell'Impero</a></li>
-									</ul>
-								</li>
-								<!-- Personaggi -->
-								<li class="nav-item">
-									<a class="nav-link" href="personaggi.html">Personaggi</a>
-								</li>
-								<!-- Premi -->
-								<li class="nav-item">
-									<a class="nav-link" href="premi.html">Premi</a>
-								</li>
-								<!-- Adattamenti -->
-								<li class="nav-item">
-									<a class="nav-link" href="adattamenti.html">Adattamenti</a>
-								</li>
-								<!-- Extra con dropdown -->
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Extra</a>
-									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="leggi.html">Leggi della robotica</a></li>
-										<li><a class="dropdown-item" href="psicostoria.html">Psicostoria</a></li>
-                    <li><a class="dropdown-item" href="imperoGalattico.html">Impero Galattico</a></li>
-										<li><a class="dropdown-item" href="collaborazioni.html">Collaborazioni</a></li>
-										<li><a class="dropdown-item" href="associazioni.html">Associazioni</a></li>
-									</ul>
-								</li>
-							</ul>
-							<form role="search">
-								<input class="form-control" type="search" placeholder="Search" aria-label="Search">
-							</form>
+					</div>
+					<!-- Testo -->
+					<div class="col-md-9 text-white p-4">
+						<p class="descr-text">
+							<a href="#" class="mytext-link">Isaac Asimov</a>, nato Isaàk Jùdovič Azìmov a Petroviči il 2 gennaio 1920 e morto a New York il 6 aprile 1992, 
+							è stato uno scrittore, biochimico e divulgatore scientifico statunitense.
+						</p>
+						<p class="descr-text">
+							Autore di enorme successo, è ritenuto uno dei padri del genere fantascientifico; pubblicato in tutto il mondo, fu ideatore delle tre leggi della robotica, 
+							divenute un riferimento fondamentale per lo sviluppo dell'intelligenza artificiale, e della psicostoria nell'<a href="imperoGalattico.html" class="mytext-link">Impero Galattico</a>.
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- Bio end -->
+				
+			<!-- Carosello -->
+			<hr class="separator">
+			<section class="container-fluid">
+				<h2 class="text-center mb-4"><strong>Le leggi della Robotica</strong></h2>
+				<h5 class="text-center mb-4 w-75 mx-auto">
+					Le leggi della robotica sono un insieme di precetti scritti da Isaac Asimov, ai quali obbediscono tutti i robot positronici<br />
+					Compaiono nei suoi racconti e in molti racconti di altri autori            
+				</h5>
+				<div id="CaroselloTop" class="carousel slide mb-8 mx-auto w-50" data-bs-ride="carousel" data-bs-interval="8000">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#CaroselloTop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Legge 0"></button>
+						<button type="button" data-bs-target="#CaroselloTop" data-bs-slide-to="1" aria-label="Legge 1"></button>
+						<button type="button" data-bs-target="#CaroselloTop" data-bs-slide-to="2" aria-label="Legge 2"></button>
+						<button type="button" data-bs-target="#CaroselloTop" data-bs-slide-to="3" aria-label="Legge 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<!-- Item 1 -->
+						<div class="carousel-item active">
+							<a href="#">
+								<img src="img/Legge 0.jpg" class="d-block w-100 h-auto mx-auto" alt="Legge 0">
+							</a>
+						</div>
+						<!-- Item 2 -->
+						<div class="carousel-item">
+							<a href="#">
+								<img src="img/Legge 1.jpg" class="d-block w-100 h-auto mx-auto" alt="Legge 1">
+							</a>
+						</div>
+						<!-- Item 3 -->
+						<div class="carousel-item">
+							<a href="#">
+								<img src="img/Legge 2.jpg" class="d-block w-100 h-auto mx-auto" alt="Legge 2">
+							</a>
+						</div>
+						<!-- Item 4 -->
+						<div class="carousel-item">
+							<a href="#">
+								<img src="img/Legge 3.jpg" class="d-block w-100 h-auto mx-auto" alt="Legge 3">
+							</a>
 						</div>
 					</div>
-				</nav>
-				<!-- Menu navigazione end -->
-        
-				<!-- Bio -->
-        <section class="container-fluid px-3 my-3 w-75 mx-auto">
-          <!-- Titolo sopra la sezione -->
-          <h1 class="text-center mb-4"><strong>Isaac Asimov</strong></h1>
-          <h2 class="text-center mb-4"><strong>Conoscere uno dei padri della robotica</strong></h2>
-
-          <div class="row bg-black d-flex justify-content-center">
-              <!-- Immagine -->
-              <div class="col-md-3 text-white p-4 text-center">
-                <a href="#">
-                  <img src="img/asimov.jpeg" class="img-fluid rounded mb-2" alt="Isaac Asimov">
-                </a>
-              </div>
-              <!-- Testo -->
-              <div class="col-md-9 text-white p-4">
-                  <p class="descr-text">
-                    <a href="#" class="mytext-link">Isaac Asimov</a>, nato Isaàk Jùdovič Azìmov a Petroviči il 2 gennaio 1920 e morto a New York il 6 aprile 1992, 
-                      è stato uno scrittore, biochimico e divulgatore scientifico statunitense.
-                  </p>
-                  <p class="descr-text">
-                      Autore di enorme successo, è ritenuto uno dei padri del genere fantascientifico; pubblicato in tutto il mondo, fu ideatore delle tre leggi della robotica, 
-                      divenute un riferimento fondamentale per lo sviluppo dell'intelligenza artificiale, e della psicostoria nell'<a href="imperoGalattico.html" class="mytext-link">Impero Galattico</a>.
-                  </p>
-              </div>
-          </div>
-        </section>
-				<!-- Bio end -->
-			
-				<!-- Carosello -->
-        <hr class="separator">
-				<section class="container-fluid">
-          <h2 class="text-center mb-4"><strong>Le leggi della Robotica</strong></h2>
-          <h5 class="text-center mb-4 w-75 mx-auto">
-            Le leggi della robotica sono un insieme di precetti scritti da Isaac Asimov, ai quali obbediscono tutti i robot positronici<br />
-            Compaiono nei suoi racconti e in molti racconti di altri autori            
-          </h5>
-					<div id="CaroselloTop" class="carousel slide mb-8 mx-auto w-50" data-bs-ride="carousel" data-bs-interval="8000">
-						<div class="carousel-indicators">
-							<button type="button" data-bs-target="#CaroselloTop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Legge 0"></button>
-							<button type="button" data-bs-target="#CaroselloTop" data-bs-slide-to="1" aria-label="Legge 1"></button>
-							<button type="button" data-bs-target="#CaroselloTop" data-bs-slide-to="2" aria-label="Legge 2"></button>
-							<button type="button" data-bs-target="#CaroselloTop" data-bs-slide-to="3" aria-label="Legge 3"></button>
+					<!-- Frecce -->
+					<button class="carousel-control-prev mx-auto" type="button" data-bs-target="#CaroselloTop" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next mx-auto" type="button" data-bs-target="#CaroselloTop" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+			<!-- Carosello end -->
+		
+			<!-- Top seller -->
+			<hr class="separator">
+			<section class="container-fluid px-3 my-3 w-75 mx-auto">
+				<!-- Titolo sopra la sezione -->
+				<h2 class="text-center mb-4"><strong>Top seller</strong></h2>
+				<h5 class="text-center mb-4 w-100 mx-auto">
+					Isaac Asimov è autore di numerosi romanzi e racconti di fantascienza e di volumi di divulgazione scientifica; 
+					la sua produzione, stimata intorno ai 500 volumi pubblicati, è incentrata non solo su argomenti scientifici, 
+					ma anche sul romanzo poliziesco, la fantascienza umoristica e la letteratura per ragazzi.
+				</h5>
+				<div class="row bg-black d-flex justify-content-center">
+					<!-- Immagine -->
+					<div class="col-md-3 bg-black p-4 text-center">
+						<div class="container-fluid book-card">
+							<h4>Io, Robot</h4>
+							<!-- <h4 class="text-line">Io, Robot</h4> -->
+							<p>Anno: 1950</p>
+							<a href="opere.html?filterTitle=Robbie">
+								<img src="img/LibroIoRobot.jpg" class="img-fluid fixed-img rounded mb-2" alt="Robbie">
+							</a>
 						</div>
-						<div class="carousel-inner">
-							<!-- Item 1 -->
-							<div class="carousel-item active">
-                <a href="#">
-								  <img src="img/Legge 0.jpg" class="d-block w-100 h-auto mx-auto" alt="Legge 0">
-                </a>
-							</div>
-							<!-- Item 2 -->
-							<div class="carousel-item">
-                <a href="#">
-								  <img src="img/Legge 1.jpg" class="d-block w-100 h-auto mx-auto" alt="Legge 1">
-                </a>
-							</div>
-							<!-- Item 3 -->
-							<div class="carousel-item">
-                <a href="#">
-								  <img src="img/Legge 2.jpg" class="d-block w-100 h-auto mx-auto" alt="Legge 2">
-                </a>
-							</div>
-							<!-- Item 4 -->
-							<div class="carousel-item">
-                <a href="#">
-								  <img src="img/Legge 3.jpg" class="d-block w-100 h-auto mx-auto" alt="Legge 3">
-                </a>
-							</div>
-						</div>
-            <!-- Frecce -->
-						<button class="carousel-control-prev mx-auto" type="button" data-bs-target="#CaroselloTop" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next mx-auto" type="button" data-bs-target="#CaroselloTop" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
 					</div>
-				</section>
-				<!-- Carosello end -->
-	
-        <!-- Top seller -->
-        <hr class="separator">
-        <section class="container-fluid px-3 my-3 w-75 mx-auto">
-          <!-- Titolo sopra la sezione -->
-          <h2 class="text-center mb-4"><strong>Top seller</strong></h2>
-          <h5 class="text-center mb-4 w-100 mx-auto">
-            Isaac Asimov è autore di numerosi romanzi e racconti di fantascienza e di volumi di divulgazione scientifica; 
-            la sua produzione, stimata intorno ai 500 volumi pubblicati, è incentrata non solo su argomenti scientifici, 
-            ma anche sul romanzo poliziesco, la fantascienza umoristica e la letteratura per ragazzi.
-          </h5>
-          <div class="row bg-black d-flex justify-content-center">
-            <!-- Immagine -->
-            <div class="col-md-3 col-12 bg-black p-4 text-center">
-              <div class="book-card">
-                <!-- <div class="text-overlay"> -->
-                  <h4 class="text-line">Io, Robot</h4>
-                  <p>Anno: 1950</p>
-                <!-- </div> -->
-                <a href="opere.html?filterTitle=Robbie">
-                  <img src="img/LibroIoRobot.jpg" class="img-fluid fixed-img rounded mb-2" alt="Robbie">
-                </a>
-              </div>
-            </div>
-            <!-- Immagine -->
-            <div class="col-md-3 col-12 bg-black p-4 text-center">
-              <div class="book-card">
-                <!-- <div class="text-overlay"> -->
-                  <h4 class="text-line">Fondazione</h4>
-                  <p>Anno: 1951</p>
-                <!-- </div>    -->
-                <a href="opere.html?filterTitle=Fondazione">
-                  <img src="img/LibroFondazione.jpg" class="img-fluid fixed-img rounded mb-2" alt="Fondazione">
-                </a>
-              </div>         
-            </div>
-            <!-- Immagine -->
-            <div class="col-md-3 col-12 bg-black p-4 text-center">
-              <div class="book-card">
-                <!-- <div class="text-overlay"> -->
-                  <h4 class="text-line">Notturno</h4>
-                  <p>Anno: 1941</p>
-                <!-- </div> -->
-                <a href="opere.html?filterTitle=Notturno">
-                  <img src="img/LibroNotturno.jpg" class="img-fluid fixed-img rounded mb-2" alt="Notturno">
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-				<!-- Top seller end -->
+					<!-- Immagine -->
+					<div class="col-md-3 bg-black p-4 text-center">
+						<div class="book-card">
+							<h4 class="text-line">Fondazione</h4>
+							<p>Anno: 1951</p>
+							<!-- </div>    -->
+							<a href="opere.html?filterTitle=Fondazione">
+								<img src="img/LibroFondazione.jpg" class="img-fluid fixed-img rounded mb-2" alt="Fondazione">
+							</a>
+						</div>         
+					</div>
+					<!-- Immagine -->
+					<div class="col-md-3 bg-black p-4 text-center">
+						<div class="book-card">
+							<h4 class="text-line">Notturno</h4>
+							<p>Anno: 1941</p>
+							<a href="opere.html?filterTitle=Notturno">
+								<img src="img/LibroNotturno.jpg" class="img-fluid fixed-img rounded mb-2" alt="Notturno">
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Top seller end -->
 
-				<!-- Multimedia -->
-        <hr class="separator">
-        <section class="container-fluid px-3 my-3 w-75 mx-auto">
-          <!-- Titolo sopra la sezione -->
-          <h2 class="text-center mb-4"><strong>Il pensiero</strong></h2>
-          <h5 class="text-center mb-4 w-75 mx-auto">
-            «Gli ideali in cui credo sono pace, libertà e sicurezza per tutti. <br />
-            Lo Stato-nazione è obsoleto: abbiamo bisogno di un governo mondiale federale»
-          </h5>
-          <div class="row bg-black d-flex justify-content-center">  <!-- 3 colonne -->
-            <!-- Video 1 -->
-            <div class="col-md-4 bg-black p-4 text-center">
-              <div class="ratio ratio-4x3">
-                <video class="w-100" controls>
-                  <source src="vid/Futuro.mp4" type="video/mp4">
-                  Il tuo browser non supporta il video tag.
-                </video>
-              </div>
-              <h4 class="text-line text-white iframe-text-padding">Il futuro</h4>
-            </div>
-            <!-- Video 2 -->
-            <div class="col-md-4 bg-black p-4 text-center">
-              <div class="ratio ratio-4x3">
-                <video class="w-100" controls>
-                  <source src="vid/Religione.mp4" type="video/mp4">
-                  Il tuo browser non supporta il video tag.
-                </video>
-              </div>
-              <h4 class="text-line text-white iframe-text-padding">La religione</h4>
-            </div>
-            <!-- Video 3 -->
-            <div class="col-md-4 bg-black p-4 text-center">
-              <div class="ratio ratio-4x3">
-                <video class="w-100" controls>
-                  <source src="vid/Previsione.mp4" type="video/mp4">
-                  Il tuo browser non supporta il video tag.
-                </video>
-              </div>
-              <h4 class="text-line text-white iframe-text-padding">Le previsioni</h4>
-            </div>
-          </div>
-        </section>
-        <!-- Multimedia end -->
+			<!-- Multimedia -->
+			<hr class="separator">
+			<section class="container-fluid px-3 my-3 w-75 mx-auto">
+				<!-- Titolo sopra la sezione -->
+				<h2 class="text-center mb-4"><strong>Il pensiero</strong></h2>
+				<h5 class="text-center mb-4 w-75 mx-auto">
+					«Gli ideali in cui credo sono pace, libertà e sicurezza per tutti. <br />
+					Lo Stato-nazione è obsoleto: abbiamo bisogno di un governo mondiale federale»
+				</h5>
+				<div class="row bg-black d-flex justify-content-center">  <!-- 3 colonne -->
+					<!-- Video 1 -->
+					<div class="col-md-4 bg-black p-4 text-center">
+						<div class="ratio ratio-4x3">
+							<video class="w-100" controls>
+							<source src="vid/Futuro.mp4" type="video/mp4">
+							Il tuo browser non supporta il video tag.
+							</video>
+						</div>
+						<h4 class="text-line text-white iframe-text-padding">Il futuro</h4>
+					</div>
+					<!-- Video 2 -->
+					<div class="col-md-4 bg-black p-4 text-center">
+						<div class="ratio ratio-4x3">
+							<video class="w-100" controls>
+							<source src="vid/Religione.mp4" type="video/mp4">
+							Il tuo browser non supporta il video tag.
+							</video>
+						</div>
+						<h4 class="text-line text-white iframe-text-padding">La religione</h4>
+					</div>
+					<!-- Video 3 -->
+					<div class="col-md-4 bg-black p-4 text-center">
+						<div class="ratio ratio-4x3">
+							<video class="w-100" controls>
+							<source src="vid/Previsione.mp4" type="video/mp4">
+							Il tuo browser non supporta il video tag.
+							</video>
+						</div>
+						<h4 class="text-line text-white iframe-text-padding">Le previsioni</h4>
+					</div>
+				</div>
+			</section>
+			<!-- Multimedia end -->
 
-      </main>
-      <!-- Main end -->
+		</main>
+		<!-- Main end -->
 
-      <!-- Footer -->
-      <footer class="container-fluid row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-black">
-        <div class="col mb-3">
-          <a href="#">
-            <img src="img/IA.jpg" alt="Logo" height="40">
-          </a>
-        </div>
+		<!-- Footer -->
+		<footer class="container-fluid row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 bg-black">
+			<div class="col mb-3">
+				<a href="#">
+					<img src="img/IA.jpg" alt="Logo" height="40">
+				</a>
+			</div>
 
-        <div class="col mb-3">
-          <h5>Chi siamo</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">About</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Indirizzo</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contattaci</a></li>
-          </ul>
-        </div>
+			<div class="col mb-3">
+				<h5>Chi siamo</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Indirizzo</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contattaci</a></li>
+				</ul>
+			</div>
 
-    
-        <div class="col mb-3">
-          <h5>Disclaimer</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Informativa</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Crediti</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          </ul>
-        </div>
-    
-        <div class="col mb-3">
-          <h5>Link utili</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="wpp.html" target=”_blank” class="nav-link p-0 text-body-secondary">Web Project Plan</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">UniBO</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bootstrap</a></li>
-          </ul>
-        </div>
+		
+			<div class="col mb-3">
+				<h5>Disclaimer</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Informativa</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Crediti</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+				</ul>
+			</div>
+		
+			<div class="col mb-3">
+				<h5>Link utili</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="wpp.html" target=”_blank” class="nav-link p-0 text-body-secondary">Web Project Plan</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">UniBO</a></li>
+					<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bootstrap</a></li>
+				</ul>
+			</div>
 
-        <div class="col mb-3">
-          <h5>Social</h5>
-          <div class="sharethis-inline-follow-buttons text-start"></div>
-        </div>
-      </footer>
-      <!-- Footer end -->
+			<div class="col mb-3">
+				<h5>Social</h5>
+				<div class="sharethis-inline-follow-buttons text-start"></div>
+			</div>
+		</footer>
+		<!-- Footer end -->
 
     </body>
 </html>

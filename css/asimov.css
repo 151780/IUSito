@@ -154,7 +154,7 @@ span.carousel-control-prev-icon {
 }
 
 .breadcrumb-item.active {
-    color: #000 !important;
+    color: #000000 !important;
 }
 
 .breadcrumb-item.active:hover {
@@ -369,6 +369,15 @@ footer h5 {
 }
 
 /* Mappa impero con tooltip inserita in container con scroll orizzontale per garantire visualizzazione sui mobili */
+#mappa {
+    display: block;
+}
+
+#map-container {
+    position: relative;
+    display: inline-block;
+}
+
 #tooltip {
     position: absolute;
     background: #00000088;
@@ -386,16 +395,6 @@ footer h5 {
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
-}
-
-
-#map-container {
-    position: relative;
-    display: inline-block;
-}
-
-#mappa {
-    display: block;
 }
 
 /* Overlay immagine personaggio */
@@ -462,38 +461,5 @@ footer h5 {
         width: 100% !important;
         max-width: 100% !important;
     }
-  }
+}
   
-
-
-
-/* Testi Carosello */
-/* .carousel-txt {
-    color: #0dcaf0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 15px; 
-    display: inline-block;
-    border-radius: 5px; 
-}
-
-.carousel-txt a {
-    color: #0dcaf0; 
-}
-
-.carousel-txt a:hover {
-    color: rgb(255, 255, 255);
-}
-
-.carousel-title {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 15px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.carousel-caption {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-} */
