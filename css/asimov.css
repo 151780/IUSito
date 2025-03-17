@@ -7,6 +7,23 @@
         hover:                  #0dcaf0ee azzurro meno trasparente */
 
 
+/* Adattamenti per schermi mobili */
+/* Carosello delle leggi */
+@media (max-width: 768px) {
+    #CaroselloTop {
+        width: 90% !important;
+    }
+}
+
+/* Mappe concettuali e wireframe */
+@media (max-width: 768px) {
+    .img-enlarge {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+
 /* Body */
 body {
     font-family: 'Lato', sans-serif !important;
@@ -21,6 +38,7 @@ body {
 .mytext-link {
     color: #0dcaf0;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .mytext-link a {
@@ -460,27 +478,4 @@ footer h5 {
 }
   
 
-/* Adattamenti per schermi mobili */
-/* Carosello delle leggi */
-@media (max-width: 768px) {
-    #CaroselloTop {
-        width: 90% !important;
-    }
-}
-
-/* Mappe concettuali e wireframe */
-@media (max-width: 768px) {
-    .img-enlarge {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
-
-/* Testo nelle book-card */
-@media (max-width: 1024px) and (orientation: landscape) {
-    .book-card h4, .book-card p {
-        font-size: small;
-        word-wrap: break-word;
-    }
-}
   

@@ -20,6 +20,40 @@ function formatLinks(text) {
       return text.replace(/<link\s+\"(.*?)\">(.*?)<\/link>/g, '<a href="$1" target="_blank" class="mytext-link">$2</a>');
 }
 
+// Caricamento dettaglio libro precedente o successivo
+function cambiaDettaglioLibro(offset) {
+    let libriFiltrati = JSON.parse(localStorage.getItem("libriFiltrati"));      // acquisizione archivio locale
+    let paginaCorrente = parseInt(localStorage.getItem("paginaCorrente")) || 1; // acquisizione pagina corrente
+
+    // if (!libriFiltrati || libriFiltrati.length === 0) {
+    //     alert("Nessun altro libro disponibile.");
+    //     return;
+    // }
+
+    let libriPerPagina = 12;  // impostazione numero di libri per pagina
+    let numPagine = Math.ceil(libriFiltrati.length / libriPerPagina);   // calcolo numero pagine
+    const libroCorrente = getQueryParams();     // indice del libro corrente
+    let indiceAttuale = libriFiltrati.findIndex(l => l.titolo === libroCorrente.titolo);
+
+    let nuovoIndice = indiceAttuale + offset;   // indice del libro da visualizzare
+
+    // Se si esce dai limiti, revolving
+    if (nuovoIndice < 0) {nuovoIndice = libriFiltrati.length - 1;}
+    if (nuovoIndice >= libriFiltrati.length) {nuovoIndice = 0;}
+
+    let nuovaPagina = Math.floor(nuovoIndice / libriPerPagina) + 1; // calcolo della nuova pagina
+    if (nuovaPagina !== paginaCorrente) {localStorage.setItem("paginaCorrente", nuovaPagina);}  // aggiorna lo storage se pagina cambiata
+    let nuovoLibro = libriFiltrati[nuovoIndice];    // acquisisci il nuovo libro da visualizzare
+
+    const nuovaURL = `dettagli.html?titolo=${encodeURIComponent(nuovoLibro.titolo)}&tipo=${encodeURIComponent(nuovoLibro.tipo)}&ciclo=${encodeURIComponent(nuovoLibro.ciclo)}&ordine1=${nuovoLibro.ordine1}&ordine2=${nuovoLibro.ordine2}&isbn=${nuovoLibro.isbn}&img=${encodeURIComponent(nuovoLibro.img)}&link=${encodeURIComponent(nuovoLibro.link)}&anno=${encodeURIComponent(nuovoLibro.anno)}&genere=${encodeURIComponent(nuovoLibro.genere)}`;
+    window.history.pushState({}, "", nuovaURL); // aggiornamento URL senza ricaricare
+
+    mostraDettagli();
+}
+
+
+
+
 // Preparazione dei dati per la visualizzazione
 function mostraDettagli() {
     const libro = getQueryParams();                                     // acquisizione dati libro
@@ -60,4 +94,13 @@ function mostraDettagli() {
         .catch(error => {
             document.getElementById("sinossi").innerText = "Sinossi non disponibile.";
         });
+
+    // gestione dei pulsanti con sostituzione del pulsante per evitare persistenza click
+    document.getElementById("pulsPrecedente").replaceWith(document.getElementById("pulsPrecedente").cloneNode(true));
+    document.getElementById("pulsSuccessivo").replaceWith(document.getElementById("pulsSuccessivo").cloneNode(true));
+
+    document.getElementById("pulsPrecedente").addEventListener("click", () => cambiaDettaglioLibro(-1));    // su click vai al precedente
+    document.getElementById("pulsSuccessivo").addEventListener("click", () => cambiaDettaglioLibro(1));     // su click vai al successivo
+    document.getElementById("pulsIndietro").addEventListener("click", function () {window.close();});       // su click chiudi e torna a catalogo
 }
+

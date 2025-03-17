@@ -137,8 +137,28 @@
 			<!-- Breadcrumbs end -->
 
 			<!-- Scheda opera -->
+
+			
 			<section class="container-fluid">
-				<h1 id="titolo" class="text-center mb-4"></h1>
+				<!-- Titolo e pulsanti -->
+				<div class="row mb-3 d-flex align-items-center w-100 row-cicli mx-auto">
+					<!-- Pulsante indietro -->
+					<div class="col-md-2">
+						<button id="pulsIndietro" type="button" class="btn btn-outline-info w-100 puls-cicli">Torna al catalogo</button>
+					</div>
+					<!-- Titolo -->
+					<div class="col-md-8 text-center">
+						<h1 id="titolo" class="text-center mb-4"></h1>
+					</div>
+					<!-- Pulsanti precedente e successivo -->
+					<div class="col-md-2" target="_blank">
+						<div class="btn-group w-100" role="group">
+							<button id="pulsPrecedente" type="button" class="btn btn-outline-info w-50 puls-cicli">Precedente</button>
+							<button id="pulsSuccessivo" type="button" class="btn btn-outline-info w-50 puls-cicli">Successivo</button>
+						</div>
+					</div>
+				</div>
+				<!-- Copertina e dettagli -->
 				<div class="row align-items-start">
 					<div class="col-md-4 text-center">
 						<img id="copertina" class="img-fluid" style="max-height: 400px;">
@@ -155,7 +175,7 @@
 						<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Cronologico</span> <strong id="ordine1"></strong></p>
 						<p><span style="display: inline-block; width: 300px;">Ordine di Lettura Logico</span> <strong id="ordine2"></strong></p>
 						<p><span>Sinossi</span></p>
-						<p id="sinossi">Caricamento sinossi...</p>			
+						<p id="sinossi" class="w-75">Caricamento sinossi...</p>			
 					</div>
 				</div>
 			</section>
