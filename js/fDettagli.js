@@ -102,3 +102,13 @@ function aggiornaEventiPulsanti() {
 
     document.getElementById("pulsIndietro").addEventListener("click", function () {window.close();});       // su click chiudi e torna a catalogo
 }
+
+// Scroll della finestra in alto all'apertura per mostrare la scheda completa
+setTimeout(() => {
+    const titoloElemento = document.getElementById("titolo");
+    const offsetNavbar = document.querySelector(".navbar").offsetHeight;
+    window.scrollTo({
+        top: titoloElemento.offsetTop - offsetNavbar - 30,
+        behavior: "smooth"
+    });
+}, 100);
