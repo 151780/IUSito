@@ -236,7 +236,7 @@ span.carousel-control-prev-icon {
 
 .row-cicli {
     height: 150px;
-    display: flex;
+    /* display: flex; */
 }
 
 /* Pulsanti */

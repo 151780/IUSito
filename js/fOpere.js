@@ -83,7 +83,7 @@ function aggiornaCatalogoLibri() {
     mostraPagina(paginaCorrente); // visualizzazione catalogo a partire dalla pagina corrente
 
     localStorage.setItem("libriFiltrati", JSON.stringify(libriFiltrati));
-    localStorage.setItem("paginaCorrente", paginaCorrente);
+    // localStorage.setItem("paginaCorrente", paginaCorrente);
 }
 
 // Aggiornamento della visualizzazione degli elementi di paginazione
@@ -149,12 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const titoloFiltro = getParametro("filterTitle"); // acquisizione dei valori dei filtri
     const cicloFiltro = getParametro("filterCiclo");
 
-    if (titoloFiltro) {
-        $("#filterTitle").val(titoloFiltro);
-    }
-    if (cicloFiltro) {
-        $("#filterCiclo").val(cicloFiltro);
-    }
+    if (titoloFiltro) {$("#filterTitle").val(titoloFiltro);}
+    if (cicloFiltro) {$("#filterCiclo").val(cicloFiltro);}
 
 
     $("#filterTipo, #filterCiclo, #filterOrdine, #filterTitle, #filterGenere").on("change", aggiornaCatalogoLibri); // attivazione evento di cambio dei filtri
