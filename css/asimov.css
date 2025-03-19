@@ -332,7 +332,11 @@ footer .nav-link:hover {
     text-decoration: underline !important;
 }
 
-footer h5, p {
+footer h5 {
+    color: #ffffff !important;
+}
+
+footer p {
     color: #ffffff !important;
 }
 
